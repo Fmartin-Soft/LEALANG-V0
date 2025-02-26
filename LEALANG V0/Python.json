@@ -1,0 +1,31 @@
+{
+    "BasicMulti": [
+        {
+            "QuestionID": 1,
+            "Question": "A two letter statement to compare values",
+            "Answers": [ "if", "IF", "What If", "Else If" ],
+            "CorrectAnswer": "if"
+        },
+        {
+            "QuestionID": 2,
+            "Question": "This statement will make the program loop until a condition has been met",
+            "Answers": [ "for", "while", "until", "go" ],
+            "CorrectAnswer": "for"
+        }
+
+    ],
+    "BasicState": [
+        {
+            "QuestionID": 1,
+            "Question": "(...)",
+            "CorrectAnswer": "print(...)",
+            "Hint": "How do we output something?"
+        },
+        {
+            "QuestionID": 2,
+            "Question": "(...,...):",
+            "CorrectAnswer": "def(...,...):",
+            "Hint": "How do we delcare/start a function?"
+        }
+    ]
+}
