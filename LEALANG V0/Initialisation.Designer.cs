@@ -1,6 +1,6 @@
 ﻿namespace LEALANG_V0
 {
-    partial class Form1
+    partial class Initialisation
     {
         /// <summary>
         /// Required designer variable.

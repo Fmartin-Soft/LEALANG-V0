@@ -10,16 +10,19 @@ using System.Windows.Forms;
 
 namespace LEALANG_V0
 {
-    public partial class Form1 : Form
+    public partial class Initialisation : Form
     {
-        public Form1()
+        //Global string LangChosen <-- i need something like this so user can decide language to use
+
+        public Initialisation()
         {
             InitializeComponent();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            new Form2().ShowDialog();
+           
+            new Quiz().ShowDialog();
             this.Close();
         }
     }
