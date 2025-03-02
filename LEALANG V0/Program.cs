@@ -16,7 +16,7 @@ namespace LEALANG_V0
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new INI());
+            Application.Run(new Initialisation());
         }
     }
 }

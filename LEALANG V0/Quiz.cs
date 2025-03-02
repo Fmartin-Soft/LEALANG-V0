@@ -25,6 +25,17 @@ namespace LEALANG_V0
         string A; //Answer
         string H; //Hint
         string Q; //Question
+
+        bool Check = false; //Quick check for amount of q's answered 
+
+        //array to figure out the users answered questions
+        List<int> AnsweredQuestions = new List<int>();
+
+        //need in the class
+        int ChosenNum;
+
+        //Deserialises The JSON file.
+        Rootobject root;
         public Quiz()
         {
             InitializeComponent();
@@ -54,6 +65,31 @@ namespace LEALANG_V0
             public string Hint { get; set; }
         }
 
+        private void MakeNewQuestion(Rootobject root)
+        {
+            //This choses the question. I only have 2 so only 0 and 1 is needed
+            ChosenNum = new Random().Next(0, 2);
+
+            while (AnsweredQuestions.Contains(ChosenNum))
+            {
+
+                ChosenNum = new Random().Next(0, 2);
+
+                if (AnsweredQuestions.SequenceEqual(Enumerable.Range(0, 2)))
+                {
+                    Check = true;
+                    return;
+                }
+            }
+
+            SerialiseBasicState(ChosenNum, root);
+
+            //This assigns them to a label (TEXT ELEMENT)
+            label1.Text = Q;
+            label2.Text = H;
+        }
+
+
         //This being in a function just looks nicer.
         private void SerialiseBasicState(int ChosenNum, Rootobject root)
         {
@@ -66,20 +102,10 @@ namespace LEALANG_V0
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            //Deserialise the right languages JSON file
-            string FileLoc = ChosenLang + ".json";
+            root = JsonConvert.DeserializeObject<Rootobject>(File.ReadAllText(ChosenLang));
 
-            //Deserialises The JSON file.
-            Rootobject root = JsonConvert.DeserializeObject<Rootobject>(File.ReadAllText(FileLoc));
+            MakeNewQuestion(root);
 
-            //This choses the question. I only have 2 so only 0 and 1 is needed
-            int ChosenNum = new Random().Next(0, 2);
-
-            SerialiseBasicState(ChosenNum, root);
-
-            //This assigns them to a label (TEXT ELEMENT)
-            label1.Text = Q;
-            label2.Text = H;
         }
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
@@ -89,12 +115,27 @@ namespace LEALANG_V0
                 if (textBox1.Text == A)
                 {
                     label3.Text = "Correct";
+
                     //Do some funky scoring stuff here
+
+
                 }
                 else
                 {
                     label3.Text = "Better luck next time!";
+
                     //Do some funky scoring stuff here
+
+                }
+                //add to answered questions
+                AnsweredQuestions.Add(ChosenNum);
+
+                //New Question
+                MakeNewQuestion(root);
+
+                if (Check == true){
+                    new Home().ShowDialog();
+                    this.Close();
                 }
             }
         }
