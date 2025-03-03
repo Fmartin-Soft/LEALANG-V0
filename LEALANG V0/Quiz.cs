@@ -13,6 +13,7 @@ using System.IO;
 //All Code made by References their documentation https://www.newtonsoft.com/json/help/html/Introduction.htm (accessed 27/02/25 04:00)
 using Newtonsoft.Json;
 using System.Security.Cryptography;
+using System.Linq.Expressions;
 
 namespace LEALANG_V0
 {
@@ -22,9 +23,15 @@ namespace LEALANG_V0
         // string ChosenLang = Initialisation.LangChosen; <- I will get this to work later
         string ChosenLang = "Python" + ".json";
 
-        string A; //Answer
+        string CA; //Correct Answer
         string H; //Hint
         string Q; //Question
+
+        //For MultiQuestions
+        string A1;
+        string A2;
+        string A3;
+        string A4;
 
         bool Check = false; //Quick check for amount of q's answered 
 
@@ -33,6 +40,9 @@ namespace LEALANG_V0
 
         //need in the class
         int ChosenNum;
+
+        //to allow the program to choose the Question type
+        int ChosenQType;
 
         //Deserialises The JSON file.
         Rootobject root;
@@ -65,16 +75,17 @@ namespace LEALANG_V0
             public string Hint { get; set; }
         }
 
-        private void MakeNewQuestion(Rootobject root)
+        private void MakeNewStateQuestion(Rootobject root)
         {
             //This choses the question. I only have 2 so only 0 and 1 is needed
             ChosenNum = new Random().Next(0, 2);
-
+            //have to sort this for later
+            AnsweredQuestions.Sort();
             while (AnsweredQuestions.Contains(ChosenNum))
             {
 
                 ChosenNum = new Random().Next(0, 2);
-
+                //this is why we sorted AnsweredQuestions, it checks if the two sequences are the exact same
                 if (AnsweredQuestions.SequenceEqual(Enumerable.Range(0, 2)))
                 {
                     Check = true;
@@ -82,62 +93,177 @@ namespace LEALANG_V0
                 }
             }
 
+            //Assigns the new Q
             SerialiseBasicState(ChosenNum, root);
 
             //This assigns them to a label (TEXT ELEMENT)
-            label1.Text = Q;
-            label2.Text = H;
+            label1.Text = H;
+            label2.Text = Q;
         }
 
+        private void MakeNewMultiQuestion(Rootobject root)
+        {
+            //This choses the question. I only have 2 so only 0 and 1 is needed
+            ChosenNum = new Random().Next(0, 2);
+            //have to sort this for later
+            AnsweredQuestions.Sort();
+            while (AnsweredQuestions.Contains(ChosenNum))
+            {
+
+                ChosenNum = new Random().Next(0, 2);
+                //this is why we sorted AnsweredQuestions, it checks if the two sequences are the exact same
+                if (AnsweredQuestions.SequenceEqual(Enumerable.Range(0, 2)))
+                {
+                    Check = true;
+                    return;
+                }
+            }
+
+            //Assigns the new Q
+            SerialiseBasicMulti(ChosenNum, root);
+
+            //This assigns them to a label (TEXT ELEMENT)
+            label1.Text = H;
+            label2.Text = Q;
+            button1.Text = A1;
+            button2.Text = A2;
+            button3.Text = A3;
+            button4.Text = A4;
+        }
+
+        //This being in a function just looks nicer.
+        private void SerialiseBasicMulti(int ChosenNum, Rootobject root)
+        {
+            //This just singles out both a hint and a question
+            H = root.BasicMulti[ChosenNum].Question; //H = Hint
+            CA = root.BasicMulti[ChosenNum].CorrectAnswer; //CA = Correct Answer
+            A1 = root.BasicMulti[ChosenNum].Answers[0]; //A1 = Answer 1
+            A2 = root.BasicMulti[ChosenNum].Answers[1]; //A2 = Answer 2
+            A3 = root.BasicMulti[ChosenNum].Answers[2]; //A3 = Answer 3
+            A4 = root.BasicMulti[ChosenNum].Answers[3]; //A4 = Answer 4
+        }
 
         //This being in a function just looks nicer.
         private void SerialiseBasicState(int ChosenNum, Rootobject root)
         {
             //This just singles out both a hint and a question
-            H = root.BasicState[ChosenNum].Hint; //H = Hint
-            Q = root.BasicState[ChosenNum].Question; //Q = Question
-            A = root.BasicState[ChosenNum].CorrectAnswer; //A = Answer
+            Q = root.BasicState[ChosenNum].Hint; //Q = Question
+            H = root.BasicState[ChosenNum].Question; //H = Hint
+            CA = root.BasicState[ChosenNum].CorrectAnswer; //A = Answer
         }
 
 
         private void Form2_Load(object sender, EventArgs e)
         {
+            //"Depacks" the json
             root = JsonConvert.DeserializeObject<Rootobject>(File.ReadAllText(ChosenLang));
 
-            MakeNewQuestion(root);
+            //Choosing the Question type
+            ChosenQType = new Random().Next(0, 2);
+
+            switch (ChosenQType) 
+            {
+                case 0:
+                    MakeNewStateQuestion(root);
+                    break;
+                case 1:
+                    MakeNewMultiQuestion(root);
+                    textBox1.Enabled = false;
+                    textBox1.Visible = false;
+                    button1.Visible = true;
+                    button2.Visible = true;
+                    button3.Visible = true; 
+                    button4.Visible = true;
+                    button1.Enabled = true;
+                    button2.Enabled = true;
+                    button3.Enabled = true;
+                    button4.Enabled = true;
+                    break;
+            }
 
         }
+
+
+        private void AnsCheck(object sender)
+        {
+            if (sender is Button btn)
+            {
+                // bassically if entered answer if correct / incorrect
+                switch (btn.Text == CA)
+                {
+                    case true:
+                        label3.Text = "Correct!";
+                        //Do some funky scoring stuff here
+                        break;
+                    case false:
+                        label3.Text = "Better luck next time!";
+                        //Do some funky scoring stuff here
+                        break;
+                }
+
+                //add to answered questions
+                AnsweredQuestions.Add(ChosenNum);
+
+                //New Question
+                MakeNewMultiQuestion(root);
+            }
+            else if (sender is TextBox textbox)
+            {
+                // bassically if entered answer if correct / incorrect
+                switch (textbox.Text == CA)
+                {
+                    case true:
+                        label3.Text = "Correct!";
+                        //Do some funky scoring stuff here
+                        break;
+                    case false:
+                        label3.Text = "Better luck next time!";
+                        //Do some funky scoring stuff here
+                        break;
+                }
+
+                //add to answered questions
+                AnsweredQuestions.Add(ChosenNum);
+
+                //New Question
+                MakeNewStateQuestion(root);
+
+            }
+            if (Check == true)
+            {
+                this.Hide();
+                new Home().ShowDialog();
+                this.Close();
+            }
+        }
+
+
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)13)
             {
-                if (textBox1.Text == A)
-                {
-                    label3.Text = "Correct";
-
-                    //Do some funky scoring stuff here
-
-
-                }
-                else
-                {
-                    label3.Text = "Better luck next time!";
-
-                    //Do some funky scoring stuff here
-
-                }
-                //add to answered questions
-                AnsweredQuestions.Add(ChosenNum);
-
-                //New Question
-                MakeNewQuestion(root);
-
-                if (Check == true){
-                    new Home().ShowDialog();
-                    this.Close();
-                }
+                AnsCheck(sender);
             }
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AnsCheck(sender);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AnsCheck(sender);
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AnsCheck(sender);
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AnsCheck(sender);
         }
     }
 }

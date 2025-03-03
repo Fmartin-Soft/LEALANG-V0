@@ -16,5 +16,12 @@ namespace LEALANG_V0
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            new Quiz().ShowDialog();
+            this.Close();
+        }
     }
 }

@@ -17,15 +17,15 @@
     "BasicState": [
         {
             "QuestionID": 0,
-            "Question": "_____(...)",
+            "Hint": "_____(...)",
             "CorrectAnswer": "print",
-            "Hint": "How do we output something?"
+            "Question": "How do we output something?"
         },
         {
             "QuestionID": 1,
-            "Question": "___(...,...):",
+            "Hint": "___(...,...):",
             "CorrectAnswer": "def",
-            "Hint": "How do we delcare/start a function?"
+            "Question": "How do we delcare/start a function?"
         }
     ]
 }
