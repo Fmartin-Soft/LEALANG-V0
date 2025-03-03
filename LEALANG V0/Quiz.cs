@@ -14,6 +14,7 @@ using System.IO;
 using Newtonsoft.Json;
 using System.Security.Cryptography;
 using System.Linq.Expressions;
+using Newtonsoft.Json.Linq;
 
 namespace LEALANG_V0
 {
@@ -21,7 +22,7 @@ namespace LEALANG_V0
     {
         //This variable will change after the prototype. This is a placeholder for now
         // string ChosenLang = Initialisation.LangChosen; <- I will get this to work later
-        string ChosenLang = "Python" + ".json";
+        string ChosenLang = "C#" + ".json";
 
         string CA; //Correct Answer
         string H; //Hint
@@ -35,6 +36,8 @@ namespace LEALANG_V0
 
         bool Check = false; //Quick check for amount of q's answered 
 
+        Random rnd = new Random();
+
         //array to figure out the users answered questions
         List<int> AnsweredQuestions = new List<int>();
 
@@ -46,6 +49,9 @@ namespace LEALANG_V0
 
         //Deserialises The JSON file.
         Rootobject root;
+
+        int[] ints = { 0, 1, 2, 3 };
+
         public Quiz()
         {
             InitializeComponent();
@@ -78,7 +84,7 @@ namespace LEALANG_V0
         private void MakeNewStateQuestion(Rootobject root)
         {
             //This choses the question. I only have 2 so only 0 and 1 is needed
-            ChosenNum = new Random().Next(0, 2);
+            ChosenNum = rnd.Next(0, 2);
             //have to sort this for later
             AnsweredQuestions.Sort();
             while (AnsweredQuestions.Contains(ChosenNum))
@@ -104,7 +110,7 @@ namespace LEALANG_V0
         private void MakeNewMultiQuestion(Rootobject root)
         {
             //This choses the question. I only have 2 so only 0 and 1 is needed
-            ChosenNum = new Random().Next(0, 2);
+            ChosenNum = rnd.Next(0, 2);
             //have to sort this for later
             AnsweredQuestions.Sort();
             while (AnsweredQuestions.Contains(ChosenNum))
@@ -119,8 +125,15 @@ namespace LEALANG_V0
                 }
             }
 
+            for (int i = 0; i < 4; i++)
+            {
+                //Fisher-Yates shuffling algorithm https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle (Accessed 03/03/25 23:51)
+                int r = rnd.Next(i, ints.Length);
+                (ints[r], ints[i]) = (ints[i], ints[r]);
+            }
             //Assigns the new Q
-            SerialiseBasicMulti(ChosenNum, root);
+            SerialiseBasicMulti(ChosenNum, root, ints);
+
 
             //This assigns them to a label (TEXT ELEMENT)
             label1.Text = H;
@@ -132,15 +145,15 @@ namespace LEALANG_V0
         }
 
         //This being in a function just looks nicer.
-        private void SerialiseBasicMulti(int ChosenNum, Rootobject root)
+        private void SerialiseBasicMulti(int ChosenNum, Rootobject root, int[] ints)
         {
             //This just singles out both a hint and a question
             H = root.BasicMulti[ChosenNum].Question; //H = Hint
             CA = root.BasicMulti[ChosenNum].CorrectAnswer; //CA = Correct Answer
-            A1 = root.BasicMulti[ChosenNum].Answers[0]; //A1 = Answer 1
-            A2 = root.BasicMulti[ChosenNum].Answers[1]; //A2 = Answer 2
-            A3 = root.BasicMulti[ChosenNum].Answers[2]; //A3 = Answer 3
-            A4 = root.BasicMulti[ChosenNum].Answers[3]; //A4 = Answer 4
+            A1 = root.BasicMulti[ChosenNum].Answers[ints[0]]; //A1 = Answer 1
+            A2 = root.BasicMulti[ChosenNum].Answers[ints[1]]; //A2 = Answer 2
+            A3 = root.BasicMulti[ChosenNum].Answers[ints[2]]; //A3 = Answer 3
+            A4 = root.BasicMulti[ChosenNum].Answers[ints[3]]; //A4 = Answer 4
         }
 
         //This being in a function just looks nicer.
@@ -159,7 +172,7 @@ namespace LEALANG_V0
             root = JsonConvert.DeserializeObject<Rootobject>(File.ReadAllText(ChosenLang));
 
             //Choosing the Question type
-            ChosenQType = new Random().Next(0, 2);
+            ChosenQType = rnd.Next(0, 2);
 
             switch (ChosenQType) 
             {
@@ -214,10 +227,12 @@ namespace LEALANG_V0
                 {
                     case true:
                         label3.Text = "Correct!";
+                        textbox.Text = null;
                         //Do some funky scoring stuff here
                         break;
                     case false:
                         label3.Text = "Better luck next time!";
+                        textbox.Text = null;
                         //Do some funky scoring stuff here
                         break;
                 }
