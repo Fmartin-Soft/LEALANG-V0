@@ -12,16 +12,30 @@ namespace LEALANG_V0
 {
     public partial class Home : Form
     {
-        public Home()
+        string ChosenLang;
+        public Home(string LangChosen, int score)
         {
+            
+            ChosenLang = LangChosen;
             InitializeComponent();
+            label1.Text = "Score: " + score.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
-            new Quiz().ShowDialog();
+            new Quiz(ChosenLang).ShowDialog();
             this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ChosenLang = "Python";
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ChosenLang = "C#";
         }
     }
 }

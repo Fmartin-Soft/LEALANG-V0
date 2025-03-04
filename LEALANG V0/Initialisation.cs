@@ -13,7 +13,7 @@ namespace LEALANG_V0
     public partial class Initialisation : Form
     {
         //Global string LangChosen <-- i need something like this so user can decide language to use
-
+        
         public Initialisation()
         {
             InitializeComponent();
@@ -21,8 +21,8 @@ namespace LEALANG_V0
 
         private void Form1_Load(object sender, EventArgs e)
         {
-           
-            new Quiz().ShowDialog();
+            string LangChosen = "Python";
+            new Quiz(LangChosen).ShowDialog();
             this.Close();
         }
     }

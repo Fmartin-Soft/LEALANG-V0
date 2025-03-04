@@ -4,13 +4,13 @@
             "QuestionID": 0,
             "Question": "A two letter statement to compare values",
             "Answers": [ "if()", "IF()", "What If()", "Else If()" ],
-            "CorrectAnswer": "if"
+            "CorrectAnswer": "if()"
         },
         {
             "QuestionID": 1,
             "Question": "This statement will make the program loop until a condition has been met",
             "Answers": [ "for()", "while()", "until()", "go()" ],
-            "CorrectAnswer": "for"
+            "CorrectAnswer": "for()"
         }
 
     ],

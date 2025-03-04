@@ -22,8 +22,8 @@ namespace LEALANG_V0
     {
         //This variable will change after the prototype. This is a placeholder for now
         // string ChosenLang = Initialisation.LangChosen; <- I will get this to work later
-        string ChosenLang = "C#" + ".json";
-
+        string ChosenJSON;
+        string ChosenLang;
         string CA; //Correct Answer
         string H; //Hint
         string Q; //Question
@@ -52,8 +52,11 @@ namespace LEALANG_V0
 
         int[] ints = { 0, 1, 2, 3 };
 
-        public Quiz()
+        int Score;
+        public Quiz(string LangChosen)
         {
+            ChosenLang = LangChosen;
+            ChosenJSON = LangChosen + ".json";
             InitializeComponent();
         }
 
@@ -169,7 +172,7 @@ namespace LEALANG_V0
         private void Form2_Load(object sender, EventArgs e)
         {
             //"Depacks" the json
-            root = JsonConvert.DeserializeObject<Rootobject>(File.ReadAllText(ChosenLang));
+            root = JsonConvert.DeserializeObject<Rootobject>(File.ReadAllText(ChosenJSON));
 
             //Choosing the Question type
             ChosenQType = rnd.Next(0, 2);
@@ -207,6 +210,7 @@ namespace LEALANG_V0
                     case true:
                         label3.Text = "Correct!";
                         //Do some funky scoring stuff here
+                        Score++;
                         break;
                     case false:
                         label3.Text = "Better luck next time!";
@@ -229,6 +233,7 @@ namespace LEALANG_V0
                         label3.Text = "Correct!";
                         textbox.Text = null;
                         //Do some funky scoring stuff here
+                        Score++;
                         break;
                     case false:
                         label3.Text = "Better luck next time!";
@@ -247,7 +252,7 @@ namespace LEALANG_V0
             if (Check == true)
             {
                 this.Hide();
-                new Home().ShowDialog();
+                new Home(ChosenLang,Score).ShowDialog();
                 this.Close();
             }
         }
