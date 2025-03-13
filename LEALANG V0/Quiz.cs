@@ -64,11 +64,11 @@ namespace LEALANG_V0
         //These Classes are needed to Deserialise the json file.
         public class Rootobject
         {
-            public List<Basicmulti> BasicMulti { get; set; }
-            public List<Basicstate> BasicState { get; set; }
+            public List<multi> Multi { get; set; }
+            public List<state> State { get; set; }
         }
 
-        public class Basicmulti
+        public class multi
         {
             public int QuestionID { get; set; }
             public string Question { get; set; }
@@ -76,7 +76,7 @@ namespace LEALANG_V0
             public string CorrectAnswer { get; set; }
         }
 
-        public class Basicstate
+        public class state
         {
             public int QuestionID { get; set; }
             public string Question { get; set; }
@@ -151,21 +151,21 @@ namespace LEALANG_V0
         private void SerialiseBasicMulti(int ChosenNum, Rootobject root, int[] ints)
         {
             //This just singles out both a hint and a question
-            H = root.BasicMulti[ChosenNum].Question; //H = Hint
-            CA = root.BasicMulti[ChosenNum].CorrectAnswer; //CA = Correct Answer
-            A1 = root.BasicMulti[ChosenNum].Answers[ints[0]]; //A1 = Answer 1
-            A2 = root.BasicMulti[ChosenNum].Answers[ints[1]]; //A2 = Answer 2
-            A3 = root.BasicMulti[ChosenNum].Answers[ints[2]]; //A3 = Answer 3
-            A4 = root.BasicMulti[ChosenNum].Answers[ints[3]]; //A4 = Answer 4
+            H = root.Multi[ChosenNum].Question; //H = Hint
+            CA = root.Multi[ChosenNum].CorrectAnswer; //CA = Correct Answer
+            A1 = root.Multi[ChosenNum].Answers[ints[0]]; //A1 = Answer 1
+            A2 = root.Multi[ChosenNum].Answers[ints[1]]; //A2 = Answer 2
+            A3 = root.Multi[ChosenNum].Answers[ints[2]]; //A3 = Answer 3
+            A4 = root.Multi[ChosenNum].Answers[ints[3]]; //A4 = Answer 4
         }
 
         //This being in a function just looks nicer.
         private void SerialiseBasicState(int ChosenNum, Rootobject root)
         {
             //This just singles out both a hint and a question
-            Q = root.BasicState[ChosenNum].Hint; //Q = Question
-            H = root.BasicState[ChosenNum].Question; //H = Hint
-            CA = root.BasicState[ChosenNum].CorrectAnswer; //A = Answer
+            Q = root.State[ChosenNum].Hint; //Q = Question
+            H = root.State[ChosenNum].Question; //H = Hint
+            CA = root.State[ChosenNum].CorrectAnswer; //A = Answer
         }
 
 
@@ -285,5 +285,7 @@ namespace LEALANG_V0
         {
             AnsCheck(sender);
         }
+
+
     }
 }

@@ -13,6 +13,7 @@ namespace LEALANG_V0
     public partial class Home : Form
     {
         string ChosenLang;
+        string ChosenDif;
         public Home(string LangChosen, int score)
         {
             
@@ -21,21 +22,41 @@ namespace LEALANG_V0
             label1.Text = "Score: " + score.ToString();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            new Quiz(ChosenLang).ShowDialog();
-            this.Close();
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
             ChosenLang = "Python";
+            Form basint = new BasicInter();
+            basint.ShowDialog();
+            if (basint.DialogResult == DialogResult.OK)
+            {
+                ChosenDif = "Basic";
+            }
+            else
+            {
+                ChosenDif = "Int";
+            }
+            this.Hide();
+            new Quiz(ChosenLang + ChosenDif).ShowDialog();
+            this.Close();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             ChosenLang = "C#";
+            Form basint = new BasicInter();
+            basint.ShowDialog();
+            if (basint.DialogResult == DialogResult.OK)
+            {
+                ChosenDif = "Basic";
+            }
+            else
+            {
+                ChosenDif = "Int";
+            }
+            this.Hide();
+            new Quiz(ChosenLang + ChosenDif).ShowDialog();
+            this.Close();
         }
     }
 }

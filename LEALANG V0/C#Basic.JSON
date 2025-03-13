@@ -1,30 +1,30 @@
 {
-    "BasicMulti": [
+    "Multi": [
         {
             "QuestionID": 0,
             "Question": "A two letter statement to compare values",
-            "Answers": [ "if", "IF", "What If", "Else If" ],
-            "CorrectAnswer": "if"
+            "Answers": [ "if()", "IF()", "What If()", "Else If()" ],
+            "CorrectAnswer": "if()"
         },
         {
             "QuestionID": 1,
             "Question": "This statement will make the program loop until a condition has been met",
-            "Answers": [ "for", "while", "until", "go" ],
-            "CorrectAnswer": "for"
+            "Answers": [ "for()", "while()", "until()", "go()" ],
+            "CorrectAnswer": "for()"
         }
 
     ],
-    "BasicState": [
+    "State": [
         {
             "QuestionID": 0,
-            "Hint": "_____(...)",
-            "CorrectAnswer": "print",
+            "Hint": "_____________(...)",
+            "CorrectAnswer": "Console.Write",
             "Question": "How do we output something?"
         },
         {
             "QuestionID": 1,
-            "Hint": "___(...,...):",
-            "CorrectAnswer": "def",
+            "Hint": "_______ ____(... , ...){}",
+            "CorrectAnswer": "private void",
             "Question": "How do we delcare/start a function?"
         }
     ]
