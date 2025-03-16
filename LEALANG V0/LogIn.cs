@@ -7,17 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SQLite;
 
 namespace LEALANG_V0
 {
-    public partial class Database : Form
+    public partial class LogIn : Form
     {
-        public Database()
+        public LogIn()
         {
             InitializeComponent();
-            SQLiteConnection conn;
-           
         }
     }
 }

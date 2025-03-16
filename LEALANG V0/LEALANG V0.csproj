@@ -185,12 +185,6 @@
     <Compile Include="BasicInter.Designer.cs">
       <DependentUpon>BasicInter.cs</DependentUpon>
     </Compile>
-    <Compile Include="Database.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Database.Designer.cs">
-      <DependentUpon>Database.cs</DependentUpon>
-    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,7 +197,12 @@
     <Compile Include="Initialisation.Designer.cs">
       <DependentUpon>Initialisation.cs</DependentUpon>
     </Compile>
-    <Compile Include="MakeDatabase.cs" />
+    <Compile Include="LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Quiz.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -220,6 +219,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Initialisation.resx">
       <DependentUpon>Initialisation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Quiz.resx">
       <DependentUpon>Quiz.cs</DependentUpon>
