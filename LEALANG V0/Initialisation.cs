@@ -22,7 +22,8 @@ namespace LEALANG_V0
         {
             string LangChosen = "Python";
             string DifficultySelected = "Basic";
-            new Quiz(LangChosen+DifficultySelected).ShowDialog();
+            new LogIn().ShowDialog();
+           // new Quiz(LangChosen+DifficultySelected).ShowDialog();
             this.Close();
         }
     }
