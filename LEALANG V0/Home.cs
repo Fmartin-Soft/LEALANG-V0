@@ -4,9 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.ServiceModel.Security;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Data.Sqlite;
 
 namespace LEALANG_V0
 {
@@ -14,13 +16,25 @@ namespace LEALANG_V0
     {
         string ChosenLang;
         string ChosenDif;
-        public Home(string LangChosen, int score=0)
+        string Name;
+        string Query;
+        string ValLoc;
+        SqliteDataReader read;
+        SqliteConnection conn;
+        DatabaseFunctions DBFuncs = new DatabaseFunctions();
+        public Home(string LangChosen,int score= 0,string nameid="Default")
         {
             
             ChosenLang = LangChosen;
             InitializeComponent();
-            label1.Text = "Hello: USER";
-
+            Query = "SELECT * FROM users WHERE UserID = @userID";
+            ValLoc = "@userID";
+            read = DBFuncs.DBReadVal(Query, nameid, ValLoc);
+            while (read.Read())
+            {
+                Name = read["FirstName"].ToString();
+            }
+            label1.Text = "Welcome:" + Name;
         }
     }
 }

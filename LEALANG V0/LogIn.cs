@@ -28,12 +28,14 @@ namespace LEALANG_V0
         int langID;
         string lang;
 
+        string Query;
+        string ValLoc;
+        DatabaseFunctions DBfuncs = new DatabaseFunctions();
         private void UserLanguageID()
         {
-            conn.Open();
-            cmd = new SqliteCommand("SELECT * FROM userlang WHERE UserID = @userid", conn);
-            cmd.Parameters.AddWithValue("@userid", userID);
-            read = cmd.ExecuteReader();
+            Query = "SELECT * FROM userlang WHERE UserID = @userid";
+            ValLoc = "@userid";
+            read = DBfuncs.DBReadVal(Query, userID.ToString(), ValLoc);
             while (read.Read())
             {
                 langID = Convert.ToInt32(read["LangID"]);
@@ -44,11 +46,9 @@ namespace LEALANG_V0
         private void LanguageChosen()
         {
 
-
-            cmd = new SqliteCommand("SELECT * FROM languages WHERE langID = @langid",conn);
-            cmd.Parameters.AddWithValue("@langid", langID);
-            conn.Open();
-            read = cmd.ExecuteReader();
+            Query = "SELECT * FROM languages WHERE langID = @langid";
+            ValLoc = "@langid";
+            read = DBfuncs.DBReadVal(Query, langID.ToString(), ValLoc);
             while (read.Read())
             {
                 lang = read["Language"].ToString();
@@ -68,15 +68,9 @@ namespace LEALANG_V0
             
             uname = textBox1.Text;
             pword = textBox2.Text;
-            //SQLite connection commands
-            //Opens the connection, allowing us to manipulate the DB
-            conn.Open();
-            //Specifying the command to use. In this it is Selecting all from the table of users wherever the Username is "uname"
-            cmd = new SqliteCommand("SELECT * FROM users WHERE Username = @uname", conn);
-            //Specifies what uname is, in this case its the username the user entered
-            cmd.Parameters.AddWithValue("@uname", uname);
-            //Reads the result
-            read = cmd.ExecuteReader();
+            Query = "SELECT * FROM users WHERE Username = @uname";
+            ValLoc = "@uname";
+            read = DBfuncs.DBReadVal(Query, uname, ValLoc);
             //While its reading do stuff
             while (read.Read())
             {
@@ -88,7 +82,9 @@ namespace LEALANG_V0
                     UserLanguageID();
                     LanguageChosen();
                     MessageBox.Show(lang);
-                    new Home(lang).ShowDialog();
+                    read.Close();
+                    conn.Close();
+                    new Home(lang,0,userID.ToString()).ShowDialog();
                     this.Hide();
                     this.Close();
                     

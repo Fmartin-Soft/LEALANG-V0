@@ -59,6 +59,7 @@
     <Compile Include="BasicInter.Designer.cs">
       <DependentUpon>BasicInter.cs</DependentUpon>
     </Compile>
+    <Compile Include="DatabaseFunctions.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
