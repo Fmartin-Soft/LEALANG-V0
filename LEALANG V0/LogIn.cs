@@ -67,7 +67,6 @@ namespace LEALANG_V0
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
             uname = textBox1.Text;
             pword = textBox2.Text;
             Query = "SELECT * FROM users WHERE Username = @uname";
@@ -90,8 +89,10 @@ namespace LEALANG_V0
             }
             if (YN == true)
             {
+                DBfuncs.UpdateScore(2, "1");
+                MessageBox.Show("he");
                 this.Hide();
-                new Home(lang, 0, userID.ToString()).ShowDialog();
+                new Home(lang, userID.ToString()).ShowDialog();
                 this.Close();
             }
             else if (YN == false)

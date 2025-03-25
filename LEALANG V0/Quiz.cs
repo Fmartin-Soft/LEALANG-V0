@@ -53,8 +53,11 @@ namespace LEALANG_V0
         int[] ints = { 0, 1, 2, 3 };
 
         int Score;
-        public Quiz(string LangChosen)
+
+        string nameID;
+        public Quiz(string LangChosen,string nameid)
         {
+            nameID = nameid;
             ChosenLang = LangChosen;
             ChosenJSON = LangChosen + "Basic.json";
             InitializeComponent();
@@ -252,7 +255,7 @@ namespace LEALANG_V0
             if (Check == true)
             {
                 this.Hide();
-                new Home(ChosenLang, Score).ShowDialog();
+                new Home(ChosenLang, nameID, Score).ShowDialog();
                 this.Close();
             }
         }

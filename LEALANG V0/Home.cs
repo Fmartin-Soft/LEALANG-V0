@@ -20,14 +20,19 @@ namespace LEALANG_V0
         string Query;
         string ValLoc;
         string LangDif;
+        string nameID;
         SqliteDataReader read;
-        SqliteConnection conn;
         DatabaseFunctions DBFuncs = new DatabaseFunctions();
-        public Home(string LangChosen,int score= 0,string nameid="1")
+        public Home(string LangChosen, string nameid , int score= 0)
         {
-            
+            nameID = nameid;
             ChosenLang = LangChosen;
             InitializeComponent();
+            if (score > 0)
+            {
+                //score = DBFuncs.GetScore(score, nameID);
+                DBFuncs.UpdateScore(2, nameID);
+            }
             Query = "SELECT * FROM users WHERE UserID = @userID";
             ValLoc = "@userID";
             read = DBFuncs.DBReadVal(Query, nameid, ValLoc);
@@ -36,6 +41,7 @@ namespace LEALANG_V0
                 Name = read["FirstName"].ToString();
             }
             label2.Text = "Welcome: " + Name;
+            
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -43,9 +49,10 @@ namespace LEALANG_V0
             
 
             this.Hide();
-            new Quiz(ChosenLang).ShowDialog();
+            new Quiz(ChosenLang,nameID).ShowDialog();
             this.Close();
         }
+
 
         private void button2_Click(object sender, EventArgs e)
         {

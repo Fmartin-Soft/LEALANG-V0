@@ -12,8 +12,10 @@ namespace LEALANG_V0
         //Sqlite Variables to use. Pretty self explanitory 
         SqliteConnection conn;
         SqliteCommand cmd;
+        SqliteCommand cmd1;
         SqliteDataReader read;
 
+        int point;
         public SqliteDataReader DBReadVal(string Query, string Value, string ValLoc)
         {
             //specifying the connection.
@@ -39,6 +41,38 @@ namespace LEALANG_V0
             read = cmd.ExecuteReader();
             //Returns Read to be able to manipulate it and read what we want after the query
             return read;
+        }
+
+        public int GetScore(int score,string userID)
+        {
+
+            conn = new SqliteConnection("Data Source=LEALANG.db");
+            conn.Open();
+            //Specifying the command to use. The Query here is specifying to select the column of points where the userID is the one specified
+            cmd = new SqliteCommand("SELECT * FROM userpoints WHERE UserID = @userID", conn);
+            //Adding the value into the query
+            cmd.Parameters.AddWithValue("@userID", userID);
+            //Reads the result
+            read = cmd.ExecuteReader();
+            while (read.Read())
+            {
+                point = Convert.ToInt32(read["Points"]);
+            }
+            point += score;
+            conn.Close();
+            return point;
+        }
+        public void UpdateScore(int score, string userID)
+        {
+            conn = new SqliteConnection("Data Source=LEALANG.db");
+            conn.Open();
+            cmd1 = new SqliteCommand("UPDATE userpoints SET Points = @points WHERE UserID = @userID", conn);
+            cmd1.Parameters.AddWithValue("@points", score);
+            cmd1.Parameters.AddWithValue("@userID", userID);
+            cmd1.ExecuteNonQuery();
+            cmd1.Cancel();
+            cmd1.Dispose();
+            cmd1 = null ;
         }
     }
 }
