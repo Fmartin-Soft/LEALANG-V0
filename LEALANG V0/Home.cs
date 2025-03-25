@@ -30,8 +30,9 @@ namespace LEALANG_V0
             InitializeComponent();
             if (score > 0)
             {
-                //score = DBFuncs.GetScore(score, nameID);
-                DBFuncs.UpdateScore(2, nameID);
+                score = DBFuncs.GetScore(score, nameID);
+                MessageBox.Show("TOTAL SCORE: " + score);
+                //DBFuncs.UpdateScore(2, nameID);
             }
             Query = "SELECT * FROM users WHERE UserID = @userID";
             ValLoc = "@userID";

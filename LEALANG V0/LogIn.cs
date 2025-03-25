@@ -37,25 +37,13 @@ namespace LEALANG_V0
         {
             Query = "SELECT * FROM userlang WHERE UserID = @userid";
             ValLoc = "@userid";
-            read = DBfuncs.DBReadVal(Query, userID.ToString(), ValLoc);
-            while (read.Read())
-            {
-                langID = Convert.ToInt32(read["LangID"]);
-            }
-            conn.Close();
-
+            langID = Convert.ToInt32(DBfuncs.DBReadValint(Query, userID.ToString(), ValLoc,"LangID"));
         }
         private void LanguageChosen()
         {
-
             Query = "SELECT * FROM languages WHERE langID = @langid";
             ValLoc = "@langid";
-            read = DBfuncs.DBReadVal(Query, langID.ToString(), ValLoc);
-            while (read.Read())
-            {
-                lang = read["Language"].ToString();
-            }
-            conn.Close();
+            lang = DBfuncs.DBReadValstr(Query, langID.ToString(), ValLoc,"Language");
         }
 
         public LogIn()
@@ -89,8 +77,8 @@ namespace LEALANG_V0
             }
             if (YN == true)
             {
-                DBfuncs.UpdateScore(2, "1");
-                MessageBox.Show("he");
+                //DBfuncs.UpdateScore(2, "1");
+                //MessageBox.Show("he");
                 this.Hide();
                 new Home(lang, userID.ToString()).ShowDialog();
                 this.Close();

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using Microsoft.Data.Sqlite;
 
 namespace LEALANG_V0
@@ -16,19 +17,58 @@ namespace LEALANG_V0
         SqliteDataReader read;
 
         int point;
+        int IntegerPassed;
+        string StringPassed;
+        public string DBReadValint(string Query, string Value, string ValLoc, string ReadLoc)
+        {
+            //specifying the connection.
+            conn = new SqliteConnection("Data Source=LEALANG.db");
+            conn.Open();
+            //Specifying the command to use. The Query is specified in code
+            cmd = new SqliteCommand(Query, conn);
+            //Specifies what the missing entry is in the query
+            cmd.Parameters.AddWithValue(ValLoc, Value);
+            //Reads the result
+            read = cmd.ExecuteReader();
+            //Returns Read to be able to manipulate it and read what we want after the query
+            while (read.Read())
+            {
+                IntegerPassed = Convert.ToInt32(read[ReadLoc]);
+            }
+            return IntegerPassed.ToString();
+        }
+        public string DBReadValstr(string Query, string Value, string ValLoc, string ReadLoc)
+        {
+            //specifying the connection.
+            conn = new SqliteConnection("Data Source=LEALANG.db");
+            conn.Open();
+            //Specifying the command to use. The Query is specified in code
+            cmd = new SqliteCommand(Query, conn);
+            //Specifies what the missing entry is in the query
+            cmd.Parameters.AddWithValue(ValLoc, Value);
+            //Reads the result
+            read = cmd.ExecuteReader();
+            //Returns Read to be able to manipulate it and read what we want after the query
+            while (read.Read())
+            {
+                StringPassed = read[ReadLoc].ToString();
+            }
+            return StringPassed;
+        }
+
         public SqliteDataReader DBReadVal(string Query, string Value, string ValLoc)
         {
             //specifying the connection.
             conn = new SqliteConnection("Data Source=LEALANG.db");
             conn.Open();
             //Specifying the command to use. The Query is specified in code
-            cmd = new SqliteCommand(Query,conn);
+            cmd = new SqliteCommand(Query, conn);
             //Specifies what the missing entry is in the query
-            cmd.Parameters.AddWithValue(ValLoc,Value);
+            cmd.Parameters.AddWithValue(ValLoc, Value);
             //Reads the result
             read = cmd.ExecuteReader();
-            //Returns Read to be able to manipulate it and read what we want after the query
             return read;
+
         }
         public SqliteDataReader DBRead(string Query)
         {
@@ -64,15 +104,19 @@ namespace LEALANG_V0
         }
         public void UpdateScore(int score, string userID)
         {
-            conn = new SqliteConnection("Data Source=LEALANG.db");
-            conn.Open();
-            cmd1 = new SqliteCommand("UPDATE userpoints SET Points = @points WHERE UserID = @userID", conn);
-            cmd1.Parameters.AddWithValue("@points", score);
-            cmd1.Parameters.AddWithValue("@userID", userID);
-            cmd1.ExecuteNonQuery();
-            cmd1.Cancel();
-            cmd1.Dispose();
-            cmd1 = null ;
+            try
+            {
+                conn = new SqliteConnection("Data Source=LEALANG.db");
+                conn.Open();
+                cmd1 = new SqliteCommand("UPDATE userpoints SET Points = @points WHERE UserID = @userID", conn);
+                cmd1.Parameters.AddWithValue("@points", score);
+                cmd1.Parameters.AddWithValue("@userID", userID);
+                cmd1.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
