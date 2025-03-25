@@ -56,7 +56,7 @@ namespace LEALANG_V0
         public Quiz(string LangChosen)
         {
             ChosenLang = LangChosen;
-            ChosenJSON = LangChosen + ".json";
+            ChosenJSON = LangChosen + "Basic.json";
             InitializeComponent();
         }
 
@@ -252,7 +252,7 @@ namespace LEALANG_V0
             if (Check == true)
             {
                 this.Hide();
-                new Home(ChosenLang,Score).ShowDialog();
+                new Home(ChosenLang, Score).ShowDialog();
                 this.Close();
             }
         }

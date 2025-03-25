@@ -31,6 +31,8 @@ namespace LEALANG_V0
         string Query;
         string ValLoc;
         DatabaseFunctions DBfuncs = new DatabaseFunctions();
+
+        bool YN = false;
         private void UserLanguageID()
         {
             Query = "SELECT * FROM userlang WHERE UserID = @userid";
@@ -70,27 +72,32 @@ namespace LEALANG_V0
             pword = textBox2.Text;
             Query = "SELECT * FROM users WHERE Username = @uname";
             ValLoc = "@uname";
-            read = DBfuncs.DBReadVal(Query, uname, ValLoc);
+            read = DBfuncs.DBReadVal(Query, uname.ToLower(), ValLoc);
             //While its reading do stuff
             while (read.Read())
             {
                 //In this instant the text between the [] is the table column name
                 if (read["Password"].ToString() == pword)
                 {
+                    //Calling a load of functions here to gather info
                     userID = Convert.ToInt32(read["UserID"]);
-                    conn.Close();
                     UserLanguageID();
                     LanguageChosen();
-                    MessageBox.Show(lang);
-                    read.Close();
                     conn.Close();
-                    new Home(lang,0,userID.ToString()).ShowDialog();
-                    this.Hide();
-                    this.Close();
-                    
+                    YN = true;
                 }
+
             }
-            MessageBox.Show("Incorrect Details!");
+            if (YN == true)
+            {
+                this.Hide();
+                new Home(lang, 0, userID.ToString()).ShowDialog();
+                this.Close();
+            }
+            else if (YN == false)
+            {
+                MessageBox.Show("Incorrect Details!");
+            }
         }
     }
 }
