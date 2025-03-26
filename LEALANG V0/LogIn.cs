@@ -56,35 +56,21 @@ namespace LEALANG_V0
         private void button2_Click(object sender, EventArgs e)
         {
             uname = textBox1.Text;
-            pword = textBox2.Text;
-            Query = "SELECT * FROM users WHERE Username = @uname";
-            ValLoc = "@uname";
-            read = DBfuncs.DBReadVal(Query, uname.ToLower(), ValLoc);
-            //While its reading do stuff
-            while (read.Read())
-            {
-                //In this instant the text between the [] is the table column name
-                if (read["Password"].ToString() == pword)
-                {
-                    //Calling a load of functions here to gather info
-                    userID = Convert.ToInt32(read["UserID"]);
-                    UserLanguageID();
-                    LanguageChosen();
-                    conn.Close();
-                    YN = true;
-                }
-
-            }
+            pword = textBox2.Text;;
+            YN = DBfuncs.PassCheck(uname, pword);
             if (YN == true)
             {
-                //DBfuncs.UpdateScore(2, "1");
-                //MessageBox.Show("he");
+                userID = Convert.ToInt32(DBfuncs.DBReadValint("SELECT * FROM users WHERE Username = @uname",uname.ToLower(),"@uname","UserID"));
+                UserLanguageID();
+                LanguageChosen();
+
                 this.Hide();
                 new Home(lang, userID.ToString()).ShowDialog();
                 this.Close();
             }
             else if (YN == false)
             {
+
                 MessageBox.Show("Incorrect Details!");
             }
         }
