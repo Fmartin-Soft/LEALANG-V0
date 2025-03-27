@@ -11,8 +11,175 @@
             "Question": "This statement will make the program loop until a condition has been met",
             "Answers": [ "for", "while", "until", "go" ],
             "CorrectAnswer": "for"
+        },
+        {
+            "QuestionID": 2,
+            "Question": "Function used to display text",
+            "Answers": [ "print", "echo", "display", "log" ],
+            "CorrectAnswer": "print"
+        },
+        {
+            "QuestionID": 3,
+            "Question": "Symbol used for single-line comments",
+            "Answers": [ "#", "//", "/*", "--" ],
+            "CorrectAnswer": "#"
+        },
+        {
+            "QuestionID": 4,
+            "Question": "Keyword to define a function",
+            "Answers": [ "def", "func", "define", "method" ],
+            "CorrectAnswer": "def"
+        },
+        {
+            "QuestionID": 5,
+            "Question": "Type used for text values",
+            "Answers": [ "str", "text", "char", "string" ],
+            "CorrectAnswer": "str"
+        },
+        {
+            "QuestionID": 6,
+            "Question": "Function to find the length of a list",
+            "Answers": [ "len", "size", "count", "length" ],
+            "CorrectAnswer": "len"
+        },
+        {
+            "QuestionID": 7,
+            "Question": "Loop that runs a fixed number of times",
+            "Answers": [ "for", "while", "loop", "until" ],
+            "CorrectAnswer": "for"
+        },
+        {
+            "QuestionID": 8,
+            "Question": "File extension for script files",
+            "Answers": [ "py", "txt", "exe", "bin" ],
+            "CorrectAnswer": "py"
+        },
+        {
+            "QuestionID": 9,
+            "Question": "Data type for whole numbers",
+            "Answers": [ "int", "float", "num", "decimal" ],
+            "CorrectAnswer": "int"
+        },
+        {
+            "QuestionID": 10,
+            "Question": "Keyword to exit a loop",
+            "Answers": [ "break", "stop", "exit", "return" ],
+            "CorrectAnswer": "break"
+        },
+        {
+            "QuestionID": 11,
+            "Question": "Keyword to check if two values are equal",
+            "Answers": [ "is", "if", "==", "eq" ],
+            "CorrectAnswer": "=="
+        },
+        {
+            "QuestionID": 12,
+            "Question": "Function used to get user input",
+            "Answers": [ "input", "scan", "read", "ask" ],
+            "CorrectAnswer": "input"
+        },
+        {
+            "QuestionID": 13,
+            "Question": "Operator for exponentiation",
+            "Answers": [ "**", "^", "exp", "pow" ],
+            "CorrectAnswer": "**"
+        },
+        {
+            "QuestionID": 14,
+            "Question": "Boolean value for false conditions",
+            "Answers": [ "false", "no", "none", "zero" ],
+            "CorrectAnswer": "false"
+        },
+        {
+            "QuestionID": 15,
+            "Question": "Keyword to check if a value exists in a list",
+            "Answers": [ "in", "has", "contains", "find" ],
+            "CorrectAnswer": "in"
+        },
+        {
+            "QuestionID": 16,
+            "Question": "How to define an empty list",
+            "Answers": [ "[]", "{}", "()", "empty" ],
+            "CorrectAnswer": "[]"
+        },
+        {
+            "QuestionID": 17,
+            "Question": "Function to round a number",
+            "Answers": [ "round", "ceil", "floor", "trim" ],
+            "CorrectAnswer": "round"
+        },
+        {
+            "QuestionID": 18,
+            "Question": "Function to check the type of a variable",
+            "Answers": [ "type", "typeof", "class", "kind" ],
+            "CorrectAnswer": "type"
+        },
+        {
+            "QuestionID": 19,
+            "Question": "Keyword to define a class",
+            "Answers": [ "class", "struct", "object", "define" ],
+            "CorrectAnswer": "class"
+        },
+        {
+            "QuestionID": 20,
+            "Question": "Symbol used for tuple definition",
+            "Answers": [ "()", "[]", "{}", "<>" ],
+            "CorrectAnswer": "()"
+        },
+        {
+            "QuestionID": 21,
+            "Question": "Keyword to handle exceptions",
+            "Answers": [ "except", "catch", "try", "handle" ],
+            "CorrectAnswer": "except"
+        },
+        {
+            "QuestionID": 22,
+            "Question": "Function to convert text to an integer",
+            "Answers": [ "int", "convert", "parse", "toint" ],
+            "CorrectAnswer": "int"
+        },
+        {
+            "QuestionID": 23,
+            "Question": "Function to add an item to a list",
+            "Answers": [ "append", "add", "push", "insert" ],
+            "CorrectAnswer": "append"
+        },
+        {
+            "QuestionID": 24,
+            "Question": "Boolean value for true conditions",
+            "Answers": [ "true", "yes", "one", "ok" ],
+            "CorrectAnswer": "true"
+        },
+        {
+            "QuestionID": 25,
+            "Question": "Operator for checking inequality",
+            "Answers": [ "!=", "<>", "=/=", "not" ],
+            "CorrectAnswer": "!="
+        },
+        {
+            "QuestionID": 26,
+            "Question": "Operator for checking if two values are the same object",
+            "Answers": [ "is", "==", "eq", "same" ],
+            "CorrectAnswer": "is"
+        },
+        {
+            "QuestionID": 27,
+            "Question": "Operator for floor division",
+            "Answers": [ "//", "/", "div", "floor" ],
+            "CorrectAnswer": "//"
+        },
+        {
+            "QuestionID": 28,
+            "Question": "Keyword used to import a module",
+            "Answers": [ "import", "load", "require", "include" ],
+            "CorrectAnswer": "import"
+        },
+        {
+            "QuestionID": 29,
+            "Question": "Function to remove an item from a list",
+            "Answers": [ "remove", "delete", "pop", "discard" ],
+            "CorrectAnswer": "remove"
         }
-
     ],
     "State": [
         {
@@ -26,6 +193,174 @@
             "Hint": "___(...,...):",
             "CorrectAnswer": "def",
             "Question": "How do we delcare/start a function?"
+        },
+        {
+            "QuestionID": 2,
+            "Hint": "___(...)",
+            "CorrectAnswer": "input",
+            "Question": "How do we get user input?"
+        },
+        {
+            "QuestionID": 3,
+            "Hint": "___ = [...]",
+            "CorrectAnswer": "list",
+            "Question": "How do we define a list?"
+        },
+        {
+            "QuestionID": 4,
+            "Hint": "___ = (...)",
+            "CorrectAnswer": "tuple",
+            "Question": "How do we define a tuple?"
+        },
+        {
+            "QuestionID": 5,
+            "Hint": "___ = {...}",
+            "CorrectAnswer": "set",
+            "Question": "How do we define a set?"
+        },
+        {
+            "QuestionID": 6,
+            "Hint": "___ = {...:...}",
+            "CorrectAnswer": "dict",
+            "Question": "How do we define a dictionary?"
+        },
+        {
+            "QuestionID": 7,
+            "Hint": "___ () in ...:",
+            "CorrectAnswer": "for",
+            "Question": "How do we start a for-loop?"
+        },
+        {
+            "QuestionID": 8,
+            "Hint": "_____():",
+            "CorrectAnswer": "while",
+            "Question": "How do we start a while-loop?"
+        },
+        {
+            "QuestionID": 9,
+            "Hint": "__():",
+            "CorrectAnswer": "if",
+            "Question": "How do we check a condition?"
+        },
+        {
+            "QuestionID": 10,
+            "Hint": "____()::",
+            "CorrectAnswer": "elif",
+            "Question": "How do we check another condition after an if-statement?"
+        },
+        {
+            "QuestionID": 11,
+            "Hint": "____:",
+            "CorrectAnswer": "else",
+            "Question": "What do we use when all other conditions fail?"
+        },
+        {
+            "QuestionID": 12,
+            "Hint": "___(...)",
+            "CorrectAnswer": "len",
+            "Question": "How do we find the length of a list?"
+        },
+        {
+            "QuestionID": 13,
+            "Hint": "___(...)",
+            "CorrectAnswer": "type",
+            "Question": "How do we check the type of a variable?"
+        },
+        {
+            "QuestionID": 14,
+            "Hint": "___(...)",
+            "CorrectAnswer": "int",
+            "Question": "How do we convert a value to an integer?"
+        },
+        {
+            "QuestionID": 15,
+            "Hint": "___(...)",
+            "CorrectAnswer": "float",
+            "Question": "How do we convert a value to a floating-point number?"
+        },
+        {
+            "QuestionID": 16,
+            "Hint": "___(...)",
+            "CorrectAnswer": "str",
+            "Question": "How do we convert a value to a string?"
+        },
+        {
+            "QuestionID": 17,
+            "Hint": "___(...)",
+            "CorrectAnswer": "bool",
+            "Question": "How do we convert a value to a boolean?"
+        },
+        {
+            "QuestionID": 18,
+            "Hint": "___(...)",
+            "CorrectAnswer": "round",
+            "Question": "How do we round a number?"
+        },
+        {
+            "QuestionID": 19,
+            "Hint": "___(...)",
+            "CorrectAnswer": "abs",
+            "Question": "How do we get the absolute value of a number?"
+        },
+        {
+            "QuestionID": 20,
+            "Hint": "___(...)",
+            "CorrectAnswer": "max",
+            "Question": "How do we find the largest value in a list?"
+        },
+        {
+            "QuestionID": 21,
+            "Hint": "___(...)",
+            "CorrectAnswer": "min",
+            "Question": "How do we find the smallest value in a list?"
+        },
+        {
+            "QuestionID": 22,
+            "Hint": "___(...)",
+            "CorrectAnswer": "sum",
+            "Question": "How do we calculate the sum of a list?"
+        },
+        {
+            "QuestionID": 23,
+            "Hint": "___(...)",
+            "CorrectAnswer": "sorted",
+            "Question": "How do we sort a list without changing the original?"
+        },
+        {
+            "QuestionID": 24,
+            "Hint": "___(...)",
+            "CorrectAnswer": "list",
+            "Question": "How do we convert something into a list?"
+        },
+        {
+            "QuestionID": 25,
+            "Hint": "___(...)",
+            "CorrectAnswer": "tuple",
+            "Question": "How do we convert something into a tuple?"
+        },
+        {
+            "QuestionID": 26,
+            "Hint": "___(...)",
+            "CorrectAnswer": "set",
+            "Question": "How do we convert something into a set?"
+        },
+        {
+            "QuestionID": 27,
+            "Hint": "___(...)",
+            "CorrectAnswer": "dict",
+            "Question": "How do we convert something into a dictionary?"
+        },
+        {
+            "QuestionID": 28,
+            "Hint": "___(...)",
+            "CorrectAnswer": "open",
+            "Question": "How do we open a file?"
+        },
+        {
+            "QuestionID": 29,
+            "Hint": "___(...)",
+            "CorrectAnswer": "close",
+            "Question": "How do we close a file?"
         }
     ]
 }

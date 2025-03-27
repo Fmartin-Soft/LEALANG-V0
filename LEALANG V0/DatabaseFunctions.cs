@@ -22,7 +22,7 @@ namespace LEALANG_V0
         string StringPassed;
         bool yn = false;
 
-        public string DBReadValint(string Query, string Value, string ValLoc, string ReadLoc)
+        public int DBReadValint(string Query, string Value, string ValLoc, string ReadLoc)
         {
             //specifying the connection.
             conn = new SqliteConnection("Data Source=LEALANG.db");
@@ -38,7 +38,7 @@ namespace LEALANG_V0
             {
                 IntegerPassed = Convert.ToInt32(read[ReadLoc]);
             }
-            return IntegerPassed.ToString();
+            return IntegerPassed;
         }
         public string DBReadValstr(string Query, string Value, string ValLoc, string ReadLoc)
         {

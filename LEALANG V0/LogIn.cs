@@ -14,10 +14,6 @@ namespace LEALANG_V0
     
     public partial class LogIn : Form
     {
-        //Sqlite Variables to use. Pretty self explanitory 
-        SqliteConnection conn;
-        SqliteCommand cmd;
-        SqliteDataReader read;
 
         //basic login variables that are needed
         string uname;
@@ -49,23 +45,23 @@ namespace LEALANG_V0
         public LogIn()
         {
             InitializeComponent();
-            //Making the connection to a new data source
-            conn = new SqliteConnection("Data Source=LEALANG.db");
+
         }
 
+        //checks the details entered to see if they can log in
         private void button2_Click(object sender, EventArgs e)
         {
             uname = textBox1.Text;
             pword = textBox2.Text;;
-            YN = DBfuncs.PassCheck(uname, pword);
+            YN = DBfuncs.PassCheck(uname, pword); //Boolean value by default is false
             if (YN == true)
             {
-                userID = Convert.ToInt32(DBfuncs.DBReadValint("SELECT * FROM users WHERE Username = @uname",uname.ToLower(),"@uname","UserID"));
-                UserLanguageID();
-                LanguageChosen();
+                userID = Convert.ToInt32(DBfuncs.DBReadValint("SELECT * FROM users WHERE Username = @uname",uname.ToLower(),"@uname","UserID")); //figure out userid
+                UserLanguageID(); // figure out the userlanguage id
+                LanguageChosen(); // figure out the chosen language
 
                 this.Hide();
-                new Home(lang, userID.ToString()).ShowDialog();
+                new Home(lang, userID.ToString()).ShowDialog(); //open home with details we figured out
                 this.Close();
             }
             else if (YN == false)
@@ -73,6 +69,20 @@ namespace LEALANG_V0
 
                 MessageBox.Show("Incorrect Details!");
             }
+        }
+
+
+        //opens The password forget form when clicked
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            new PasswordForget().ShowDialog();
+            this.Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

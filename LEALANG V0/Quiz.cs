@@ -15,6 +15,7 @@ using Newtonsoft.Json;
 using System.Security.Cryptography;
 using System.Linq.Expressions;
 using Newtonsoft.Json.Linq;
+using System.Runtime.Remoting.Channels;
 
 namespace LEALANG_V0
 {
@@ -55,6 +56,8 @@ namespace LEALANG_V0
         int Score;
 
         string nameID;
+
+        object snder;
         public Quiz(string LangChosen,string nameid)
         {
             nameID = nameid;
@@ -87,22 +90,32 @@ namespace LEALANG_V0
             public string Hint { get; set; }
         }
 
+        public void AfterQuestionReview(bool correct = false)
+        {
+            this.Size = new System.Drawing.Size(393, 328);
+            label3.Visible = true;
+            label4.Visible = true;
+            button5.Visible = true;
+            if (correct)
+            {
+                label3.Text = "Correct!";
+                label4.Text = "Well Done";
+            }
+            else
+            {
+                label3.Text = "Incorrect!";
+                label4.Text = "The Correct Answer was: " + CA;
+            }
+        }
         private void MakeNewStateQuestion(Rootobject root)
         {
             //This choses the question. I only have 2 so only 0 and 1 is needed
-            ChosenNum = rnd.Next(0, 2);
-            //have to sort this for later
-            AnsweredQuestions.Sort();
-            while (AnsweredQuestions.Contains(ChosenNum))
-            {
+            ChosenNum = rnd.Next(0, 30);
 
-                ChosenNum = new Random().Next(0, 2);
-                //this is why we sorted AnsweredQuestions, it checks if the two sequences are the exact same
-                if (AnsweredQuestions.SequenceEqual(Enumerable.Range(0, 2)))
-                {
-                    Check = true;
-                    return;
-                }
+            if (AnsweredQuestions.Count() == 5)
+            {
+                Check = true;
+                return;
             }
 
             //Assigns the new Q
@@ -115,25 +128,19 @@ namespace LEALANG_V0
 
         private void MakeNewMultiQuestion(Rootobject root)
         {
-            //This choses the question. I only have 2 so only 0 and 1 is needed
-            ChosenNum = rnd.Next(0, 2);
-            //have to sort this for later
-            AnsweredQuestions.Sort();
-            while (AnsweredQuestions.Contains(ChosenNum))
+            //This choses the question. I have 30 so only 0 and 30 is needed
+            ChosenNum = rnd.Next(0, 30);
+           
+            if (AnsweredQuestions.Count() == 5)
             {
-
-                ChosenNum = new Random().Next(0, 2);
-                //this is why we sorted AnsweredQuestions, it checks if the two sequences are the exact same
-                if (AnsweredQuestions.SequenceEqual(Enumerable.Range(0, 2)))
-                {
-                    Check = true;
-                    return;
-                }
+                Check = true;
+                return;
             }
-
+            // THIS FOR LOOP IS NOT MY CODE
             for (int i = 0; i < 4; i++)
             {
-                //Fisher-Yates shuffling algorithm https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle (Accessed 03/03/25 23:51)
+                //Fisher-Yates shuffling algorithm https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle (Accessed 03/03/25 23:51) 
+                
                 int r = rnd.Next(i, ints.Length);
                 (ints[r], ints[i]) = (ints[i], ints[r]);
             }
@@ -207,49 +214,46 @@ namespace LEALANG_V0
         {
             if (sender is Button btn)
             {
+                snder = sender;
                 // bassically if entered answer if correct / incorrect
                 switch (btn.Text == CA)
                 {
                     case true:
-                        label3.Text = "Correct!";
+                        AfterQuestionReview(true);
                         //Do some funky scoring stuff here
                         Score++;
                         break;
                     case false:
-                        label3.Text = "Better luck next time!";
+                        AfterQuestionReview();
                         //Do some funky scoring stuff here
                         break;
                 }
 
-                //add to answered questions
-                AnsweredQuestions.Add(ChosenNum);
 
-                //New Question
-                MakeNewMultiQuestion(root);
+
+
             }
             else if (sender is TextBox textbox)
             {
+                snder = sender;
                 // bassically if entered answer if correct / incorrect
                 switch (textbox.Text == CA)
                 {
                     case true:
-                        label3.Text = "Correct!";
+                        AfterQuestionReview(true);
                         textbox.Text = null;
                         //Do some funky scoring stuff here
                         Score++;
                         break;
                     case false:
-                        label3.Text = "Better luck next time!";
+                        AfterQuestionReview();
                         textbox.Text = null;
                         //Do some funky scoring stuff here
                         break;
                 }
 
-                //add to answered questions
-                AnsweredQuestions.Add(ChosenNum);
 
-                //New Question
-                MakeNewStateQuestion(root);
+
 
             }
             if (Check == true)
@@ -289,6 +293,25 @@ namespace LEALANG_V0
             AnsCheck(sender);
         }
 
+        private void button5_Click(object sender, EventArgs e)
+        {
+            this.Size = new System.Drawing.Size(393, 258);
+            label3.Visible = false;
+            label4.Visible = false;
+            button5.Visible = false;
+            //add to answered questions
+            AnsweredQuestions.Add(ChosenNum);
+            if (snder is Button btn)
+            {
+                //New Question
+                MakeNewMultiQuestion(root);
+            }
+            else if(snder is TextBox textbox)
+            {
+                //New Question
+                MakeNewStateQuestion(root);
+            }
 
+        }
     }
 }

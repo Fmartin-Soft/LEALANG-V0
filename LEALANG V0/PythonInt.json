@@ -1,31 +1,366 @@
 {
-  "Multi": [
-    {
-      "QuestionID": 0,
-      "Question": "A two letter statement to compare values",
-      "Answers": [ "if", "IF", "What If", "Else If" ],
-      "CorrectAnswer": "if"
-    },
-    {
-      "QuestionID": 1,
-      "Question": "This statement will make the program loop until a condition has been met",
-      "Answers": [ "for", "while", "until", "go" ],
-      "CorrectAnswer": "for"
-    }
-
-  ],
-  "State": [
-    {
-      "QuestionID": 0,
-      "Hint": "_____(...)",
-      "CorrectAnswer": "print",
-      "Question": "How do we output something?"
-    },
-    {
-      "QuestionID": 1,
-      "Hint": "___(...,...):",
-      "CorrectAnswer": "def",
-      "Question": "How do we delcare/start a function?"
-    }
-  ]
+    "Multi": [
+        {
+            "QuestionID": 0,
+            "Question": "Which of the following is the correct syntax for a list comprehension to create a list of squares for numbers 0 through 4?",
+            "Answers": [ "[x*x for x in range(5)]", "[x*x for x in range(5)]", "{x*x for x in range(5)}", "for x in range(5): x*x" ],
+            "CorrectAnswer": "[x*x for x in range(5)]"
+        },
+        {
+            "QuestionID": 1,
+            "Question": "What is the output of the following code?\n\nprint([i*i for i in range(3)])",
+            "Answers": [ "[1, 4, 9]", "[0, 1, 4]", "[0, 1, 4, 9]", "Error" ],
+            "CorrectAnswer": "[0, 1, 4]"
+        },
+        {
+            "QuestionID": 2,
+            "Question": "Which of the following data types is mutable?",
+            "Answers": [ "tuple", "list", "string", "frozenset" ],
+            "CorrectAnswer": "list"
+        },
+        {
+            "QuestionID": 3,
+            "Question": "What is the result of the expression '3' + '4'?",
+            "Answers": [ "7", "34", "Error", "None" ],
+            "CorrectAnswer": "34"
+        },
+        {
+            "QuestionID": 4,
+            "Question": "Which pair of keywords is used for exception handling in Python?",
+            "Answers": [ "try/except", "do/catch", "try/catch", "if/else" ],
+            "CorrectAnswer": "try/except"
+        },
+        {
+            "QuestionID": 5,
+            "Question": "What is the output of the following code?\n\nprint('Hello {0}, {1}'.format('Alice', 'Bob'))",
+            "Answers": [ "Hello Alice, Bob", "Hello Bob, Alice", "Hello {0}, {1}", "Error" ],
+            "CorrectAnswer": "Hello Alice, Bob"
+        },
+        {
+            "QuestionID": 6,
+            "Question": "Which function is used to get the absolute value of a number?",
+            "Answers": [ "abs", "round", "int", "max" ],
+            "CorrectAnswer": "abs"
+        },
+        {
+            "QuestionID": 7,
+            "Question": "Which of the following is a valid variable name in Python?",
+            "Answers": [ "my_var", "2ndValue", "class", "None" ],
+            "CorrectAnswer": "my_var"
+        },
+        {
+            "QuestionID": 8,
+            "Question": "Which operator checks for object identity?",
+            "Answers": [ "is", "==", "equals", "in" ],
+            "CorrectAnswer": "is"
+        },
+        {
+            "QuestionID": 9,
+            "Question": "Which built‑in function returns an iterator over a sequence?",
+            "Answers": [ "iter", "next", "range", "enumerate" ],
+            "CorrectAnswer": "iter"
+        },
+        {
+            "QuestionID": 10,
+            "Question": "What is the output of the following code?\n\nprint(list('abc'))",
+            "Answers": [ "['abc']", "['a', 'b', 'c']", "['ab', 'c']", "Error" ],
+            "CorrectAnswer": "['a', 'b', 'c']"
+        },
+        {
+            "QuestionID": 11,
+            "Question": "In Python, what is the data type of the expression (1)?",
+            "Answers": [ "tuple", "int", "list", "str" ],
+            "CorrectAnswer": "int"
+        },
+        {
+            "QuestionID": 12,
+            "Question": "What is the output of the following code?\n\nprint((1,))",
+            "Answers": [ "1", "(1)", "(1,)", "Error" ],
+            "CorrectAnswer": "(1,)"
+        },
+        {
+            "QuestionID": 13,
+            "Question": "Which method can be used to remove an element from a dictionary?",
+            "Answers": [ "pop", "remove", "delete", "discard" ],
+            "CorrectAnswer": "pop"
+        },
+        {
+            "QuestionID": 14,
+            "Question": "What is the output of the following code?\n\nprint(bool(''))",
+            "Answers": [ "True", "False", "None", "Error" ],
+            "CorrectAnswer": "False"
+        },
+        {
+            "QuestionID": 15,
+            "Question": "Which keyword is used to define an anonymous function in Python?",
+            "Answers": [ "lambda", "def", "anon", "function" ],
+            "CorrectAnswer": "lambda"
+        },
+        {
+            "QuestionID": 16,
+            "Question": "Which of the following is NOT a built‑in Python data type?",
+            "Answers": [ "list", "set", "array", "dict" ],
+            "CorrectAnswer": "array"
+        },
+        {
+            "QuestionID": 17,
+            "Question": "What is the result of the expression 3 > 2 and 2 < 4?",
+            "Answers": [ "True", "False", "Error", "None" ],
+            "CorrectAnswer": "True"
+        },
+        {
+            "QuestionID": 18,
+            "Question": "What is the output of the following code?\n\nprint('abc'.find('b'))",
+            "Answers": [ "1", "2", "0", "-1" ],
+            "CorrectAnswer": "1"
+        },
+        {
+            "QuestionID": 19,
+            "Question": "Which function converts a value to a string?",
+            "Answers": [ "str", "int", "float", "bool" ],
+            "CorrectAnswer": "str"
+        },
+        {
+            "QuestionID": 20,
+            "Question": "What is the output of the following code?\n\nprint(0.1 + 0.2 == 0.3)",
+            "Answers": [ "True", "False", "0.3", "Error" ],
+            "CorrectAnswer": "False"
+        },
+        {
+            "QuestionID": 21,
+            "Question": "Which built‑in function allows iteration over both index and value in a sequence?",
+            "Answers": [ "enumerate", "zip", "iter", "list" ],
+            "CorrectAnswer": "enumerate"
+        },
+        {
+            "QuestionID": 22,
+            "Question": "What is the output of the expression 'a' * 3?",
+            "Answers": [ "aaa", "a3", "Error", "3a" ],
+            "CorrectAnswer": "aaa"
+        },
+        {
+            "QuestionID": 23,
+            "Question": "Which of the following symbols is commonly used to start a multi‑line comment in Python?",
+            "Answers": [ "'''", "\"\"\"", "#", "/*" ],
+            "CorrectAnswer": "'''"
+        },
+        {
+            "QuestionID": 24,
+            "Question": "What is the proper way to check if key 'k' exists in a dictionary d?",
+            "Answers": [ "if k in d:", "if k exists in d:", "if d.contains(k):", "if d.has_key(k):" ],
+            "CorrectAnswer": "if k in d:"
+        },
+        {
+            "QuestionID": 25,
+            "Question": "After executing x = 5 / 2, what is the data type of x?",
+            "Answers": [ "float", "int", "decimal", "fraction" ],
+            "CorrectAnswer": "float"
+        },
+        {
+            "QuestionID": 26,
+            "Question": "Which built‑in function returns the length of an object?",
+            "Answers": [ "len", "size", "count", "length" ],
+            "CorrectAnswer": "len"
+        },
+        {
+            "QuestionID": 27,
+            "Question": "Which statement is used to skip the current iteration in a loop?",
+            "Answers": [ "continue", "break", "pass", "skip" ],
+            "CorrectAnswer": "continue"
+        },
+        {
+            "QuestionID": 28,
+            "Question": "Which built‑in function can generate a sequence of numbers?",
+            "Answers": [ "range", "list", "zip", "map" ],
+            "CorrectAnswer": "range"
+        },
+        {
+            "QuestionID": 29,
+            "Question": "What is the output of the expression 7 % 3?",
+            "Answers": [ "1", "2", "3", "0" ],
+            "CorrectAnswer": "1"
+        }
+    ],
+    "State": [
+        {
+            "QuestionID": 0,
+            "Hint": "Think integer division of 10 by 2.",
+            "CorrectAnswer": "5",
+            "Question": "What is the output of print(10 // 2)?"
+        },
+        {
+            "QuestionID": 1,
+            "Hint": "Non-zero numbers evaluate as truthy.",
+            "CorrectAnswer": "True",
+            "Question": "What is the output of print(bool(1))?"
+        },
+        {
+            "QuestionID": 2,
+            "Hint": "An empty list and False are not equal.",
+            "CorrectAnswer": "False",
+            "Question": "What is the output of print([] == False)?"
+        },
+        {
+            "QuestionID": 3,
+            "Hint": "This function is used with a string placeholder like _('{:.2f}').",
+            "CorrectAnswer": "format",
+            "Question": "Which function helps format a number to 2 decimal places?"
+        },
+        {
+            "QuestionID": 4,
+            "Hint": "It converts an iterable into a sequential collection.",
+            "CorrectAnswer": "list",
+            "Question": "Which function converts a range object into a list?"
+        },
+        {
+            "QuestionID": 5,
+            "Hint": "This step value increases by a fixed amount to skip every other number.",
+            "CorrectAnswer": "2",
+            "Question": "What step value makes print(list(range(1, 6, x))) output 1 3 5?"
+        },
+        {
+            "QuestionID": 6,
+            "Hint": "This same function used in Q3 works to insert a value into a string.",
+            "CorrectAnswer": "format",
+            "Question": "Which function is used with _('{:.1f}') to display a float with one decimal place?"
+        },
+        {
+            "QuestionID": 7,
+            "Hint": "The type of a mapping object in Python.",
+            "CorrectAnswer": "dict",
+            "Question": "If x = {'x': 10}, what does print(type(x).__name__) output?"
+        },
+        {
+            "QuestionID": 8,
+            "Hint": "This function outputs text to the console.",
+            "CorrectAnswer": "print",
+            "Question": "Which function is needed to complete _('{} {}'.format('Hello', 'World')) so that it displays 'Hello World'?"
+        },
+        {
+            "QuestionID": 9,
+            "Hint": "This list method adds an element to the end.",
+            "CorrectAnswer": "append",
+            "Question": "What method should replace ?? in x = [1, 2]; x.??(3) to add 3 to the list?"
+        },
+        {
+            "QuestionID": 10,
+            "Hint": "This type only stores unique items.",
+            "CorrectAnswer": "set",
+            "Question": "Which type will store only unique numbers from x = [2, 4, 4, 6]?"
+        },
+        {
+            "QuestionID": 11,
+            "Hint": "Remember: indexing starts at zero.",
+            "CorrectAnswer": "1",
+            "Question": "What index should we start slicing at in letters = ['a', 'b', 'c', 'd'] to obtain ['b', 'c', 'd']?"
+        },
+        {
+            "QuestionID": 12,
+            "Hint": "This built-in function casts a float to a whole number.",
+            "CorrectAnswer": "int",
+            "Question": "Which function converts a float to an integer, e.g. int(3.14)?"
+        },
+        {
+            "QuestionID": 13,
+            "Hint": "This list method reverses the order of elements in place.",
+            "CorrectAnswer": "reverse",
+            "Question": "Which method flips a list’s order?"
+        },
+        {
+            "QuestionID": 14,
+            "Hint": "It cleans leading and trailing whitespace.",
+            "CorrectAnswer": "strip",
+            "Question": "Which string method removes spaces from both ends of a string?"
+        },
+        {
+            "QuestionID": 15,
+            "Hint": "This function applies a lambda to each element of an iterable.",
+            "CorrectAnswer": "map",
+            "Question": "Which function applies a lambda function to each element in a list?"
+        },
+        {
+            "QuestionID": 16,
+            "Hint": "It converts every character to its uppercase form.",
+            "CorrectAnswer": "upper",
+            "Question": "Which string method makes all characters in a string uppercase?"
+        },
+        {
+            "QuestionID": 17,
+            "Hint": "Converts any iterable into a list, including filter objects.",
+            "CorrectAnswer": "list",
+            "Question": "What function converts a filter object into a list?"
+        },
+        {
+            "QuestionID": 18,
+            "Hint": "It counts the number of occurrences of a given substring.",
+            "CorrectAnswer": "count",
+            "Question": "Which method returns the number of times a substring appears in a string?"
+        },
+        {
+            "QuestionID": 19,
+            "Hint": "This special variable holds the module’s name.",
+            "CorrectAnswer": "__name__",
+            "Question": "Which special variable is used in the expression if __name__ == '__main__'?"
+        },
+        {
+            "QuestionID": 20,
+            "Hint": "It pairs elements from two iterables together.",
+            "CorrectAnswer": "zip",
+            "Question": "Which function combines two lists into pairs, such as in dict(zip(keys, values))?"
+        },
+        {
+            "QuestionID": 21,
+            "Hint": "It marks the beginning of a function declaration.",
+            "CorrectAnswer": "def",
+            "Question": "Which keyword is used to start a function definition?"
+        },
+        {
+            "QuestionID": 22,
+            "Hint": "It converts a string into title case.",
+            "CorrectAnswer": "title",
+            "Question": "Which string method capitalizes the first letter of each word?"
+        },
+        {
+            "QuestionID": 23,
+            "Hint": "It concatenates list elements into a single string using a specified separator.",
+            "CorrectAnswer": "join",
+            "Question": "Which method is used to join a list of strings into one string with a separator?"
+        },
+        {
+            "QuestionID": 24,
+            "Hint": "Counts characters in a sequence.",
+            "CorrectAnswer": "len",
+            "Question": "Which function returns the number of characters in a string?"
+        },
+        {
+            "QuestionID": 25,
+            "Hint": "Repeats the string multiple times without adding spaces.",
+            "CorrectAnswer": "ababab",
+            "Question": "What is the output of print('ab' * 3)?"
+        },
+        {
+            "QuestionID": 26,
+            "Hint": "It computes 2 raised to the power of 3.",
+            "CorrectAnswer": "8",
+            "Question": "What is the output of print(2 ** 3)?"
+        },
+        {
+            "QuestionID": 27,
+            "Hint": "This operator returns the remainder of division.",
+            "CorrectAnswer": "%",
+            "Question": "Which operator is used for the modulus operation?"
+        },
+        {
+            "QuestionID": 28,
+            "Hint": "It transforms every character to lowercase.",
+            "CorrectAnswer": "hello",
+            "Question": "What is the output of print('Hello'.lower())?"
+        },
+        {
+            "QuestionID": 29,
+            "Hint": "Consists of two symbols: an exclamation mark and an equals sign.",
+            "CorrectAnswer": "!=",
+            "Question": "Which operator checks if two values are not equal?"
+        }
+    ]
 }

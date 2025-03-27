@@ -59,6 +59,12 @@
     <Compile Include="BasicInter.Designer.cs">
       <DependentUpon>BasicInter.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateUser.Designer.cs">
+      <DependentUpon>CreateUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatabaseFunctions.cs" />
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -77,6 +83,12 @@
     </Compile>
     <Compile Include="LogIn.Designer.cs">
       <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordForget.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PasswordForget.Designer.cs">
+      <DependentUpon>PasswordForget.cs</DependentUpon>
     </Compile>
     <Compile Include="Quiz.cs">
       <SubType>Form</SubType>
@@ -98,6 +110,9 @@
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PasswordForget.resx">
+      <DependentUpon>PasswordForget.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Quiz.resx">
       <DependentUpon>Quiz.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,6 +132,7 @@
     <Content Include="C#Int.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <None Include="bin\Debug\LEALANG.db" />
     <None Include="jsconfig1.json" />
     <Content Include="LEALANG.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
