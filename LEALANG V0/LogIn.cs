@@ -60,6 +60,14 @@ namespace LEALANG_V0
                 UserLanguageID(); // figure out the userlanguage id
                 LanguageChosen(); // figure out the chosen language
 
+                //bit to do with streaks
+                int streak = DBfuncs.DBReadValint("SELECT * FROM userpoints WHERE UserID = @userid", userID.ToString(), "@userid", "Streak");
+                string log = DBfuncs.LastLoginCheck(userID.ToString());
+                if (log == "false")
+                {
+                    DBfuncs.StreakChange(userID.ToString(), 0);
+                }
+
                 this.Hide();
                 new Home(lang, userID.ToString()).ShowDialog(); //open home with details we figured out
                 this.Close();
@@ -82,7 +90,9 @@ namespace LEALANG_V0
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            new SignUp().ShowDialog();
+            this.Close();
         }
     }
 }

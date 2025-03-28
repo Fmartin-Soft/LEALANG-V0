@@ -58,11 +58,26 @@ namespace LEALANG_V0
         string nameID;
 
         object snder;
+
+        int UserScore;
+
+        DatabaseFunctions DBfuncs = new DatabaseFunctions();
+
+        //the basic function for any form
         public Quiz(string LangChosen,string nameid)
         {
             nameID = nameid;
             ChosenLang = LangChosen;
-            ChosenJSON = LangChosen + "Basic.json";
+            UserScore = DBfuncs.GetScoreBase(nameid); //Getting the usersdb score to determine the difficulty
+            if (UserScore >= 120)
+            {
+                ChosenJSON = LangChosen + "Basic.json";
+            }
+            else
+            {
+                ChosenJSON = LangChosen + "Int.json";
+            }
+
             InitializeComponent();
         }
 
@@ -90,13 +105,15 @@ namespace LEALANG_V0
             public string Hint { get; set; }
         }
 
+
+        //as name suggests this functions always gets called after a question
         public void AfterQuestionReview(bool correct = false)
         {
-            this.Size = new System.Drawing.Size(393, 328);
+            this.Size = new System.Drawing.Size(393, 328); // sets the size of the form a bit bigger to allow for the info
             label3.Visible = true;
             label4.Visible = true;
             button5.Visible = true;
-            if (correct)
+            if (correct) //if the correct boolean variable is true, having it as if(correct) is the same as if(true)
             {
                 label3.Text = "Correct!";
                 label4.Text = "Well Done";
@@ -107,15 +124,16 @@ namespace LEALANG_V0
                 label4.Text = "The Correct Answer was: " + CA;
             }
         }
+
+        //make a new state question
         private void MakeNewStateQuestion(Rootobject root)
         {
             //This choses the question. I only have 2 so only 0 and 1 is needed
             ChosenNum = rnd.Next(0, 30);
 
-            if (AnsweredQuestions.Count() == 5)
+            if (AnsweredQuestions.Count() == 4)
             {
                 Check = true;
-                return;
             }
 
             //Assigns the new Q
@@ -131,10 +149,9 @@ namespace LEALANG_V0
             //This choses the question. I have 30 so only 0 and 30 is needed
             ChosenNum = rnd.Next(0, 30);
            
-            if (AnsweredQuestions.Count() == 5)
+            if (AnsweredQuestions.Count() == 4)
             {
                 Check = true;
-                return;
             }
             // THIS FOR LOOP IS NOT MY CODE
             for (int i = 0; i < 4; i++)
@@ -237,6 +254,7 @@ namespace LEALANG_V0
             {
                 snder = sender;
                 // bassically if entered answer if correct / incorrect
+                textbox.Enabled = false;
                 switch (textbox.Text == CA)
                 {
                     case true:
@@ -244,11 +262,13 @@ namespace LEALANG_V0
                         textbox.Text = null;
                         //Do some funky scoring stuff here
                         Score++;
+
                         break;
                     case false:
                         AfterQuestionReview();
                         textbox.Text = null;
                         //Do some funky scoring stuff here
+
                         break;
                 }
 
@@ -256,12 +276,7 @@ namespace LEALANG_V0
 
 
             }
-            if (Check == true)
-            {
-                this.Hide();
-                new Home(ChosenLang, nameID, Score).ShowDialog();
-                this.Close();
-            }
+
         }
 
 
@@ -293,23 +308,30 @@ namespace LEALANG_V0
             AnsCheck(sender);
         }
 
+
+        //when the "next question" button is pressed
         private void button5_Click(object sender, EventArgs e)
         {
+            if (Check == true)
+            {
+                this.Hide();
+                new Home(ChosenLang, nameID, Score).ShowDialog();
+                this.Close();
+            }
             this.Size = new System.Drawing.Size(393, 258);
             label3.Visible = false;
             label4.Visible = false;
             button5.Visible = false;
-            //add to answered questions
-            AnsweredQuestions.Add(ChosenNum);
+            AnsweredQuestions.Add(ChosenNum); //add to answered questions
             if (snder is Button btn)
             {
-                //New Question
-                MakeNewMultiQuestion(root);
+                MakeNewMultiQuestion(root); //New Question
             }
             else if(snder is TextBox textbox)
             {
-                //New Question
-                MakeNewStateQuestion(root);
+                textbox.Enabled = true; //reenable the textbox
+                
+                MakeNewStateQuestion(root); //New Question
             }
 
         }
