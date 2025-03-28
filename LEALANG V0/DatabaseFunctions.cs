@@ -216,6 +216,22 @@ namespace LEALANG_V0
                 MessageBox.Show(ex.Message); // show exception
             }
         }
+        public void UpdateDay(string userID)
+        {
+            try // try and catch command
+            {   
+                conn = new SqliteConnection("Data Source=LEALANG.db"); //db connection statement
+                conn.Open(); //open the db
+                cmd = new SqliteCommand("UPDATE userpoints SET LastDay = @login WHERE UserID = @userID", conn); //use a query to make a command
+                cmd.Parameters.AddWithValue("@userID", userID);
+                cmd.Parameters.AddWithValue("@login", DateTime.Today.ToString());
+                cmd.ExecuteNonQuery(); //execute it. This updates the score
+            }
+            catch (Exception ex) // catching exceptions, hopefully never happens 
+            {
+                MessageBox.Show(ex.Message); // show exception
+            }
+        }
     }
 
 }

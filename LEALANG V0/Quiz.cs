@@ -63,6 +63,7 @@ namespace LEALANG_V0
 
         DatabaseFunctions DBfuncs = new DatabaseFunctions();
 
+
         //the basic function for any form
         public Quiz(string LangChosen,string nameid)
         {
@@ -314,6 +315,13 @@ namespace LEALANG_V0
         {
             if (Check == true)
             {
+                string temp = DBfuncs.LastLoginCheck(nameID);
+                if (temp == "true" || temp == "false")
+                {
+                    int streak = DBfuncs.DBReadValint("SELECT * FROM userpoints WHERE UserID = @userid", nameID, "@userid", "Streak");
+                    DBfuncs.StreakChange(nameID, streak + 1);
+                    DBfuncs.UpdateDay(nameID);
+                }
                 this.Hide();
                 new Home(ChosenLang, nameID, Score).ShowDialog();
                 this.Close();
