@@ -70,7 +70,7 @@ namespace LEALANG_V0
             nameID = nameid;
             ChosenLang = LangChosen;
             UserScore = DBfuncs.GetScoreBase(nameid); //Getting the usersdb score to determine the difficulty
-            if (UserScore >= 120)
+            if (UserScore <= 120)
             {
                 ChosenJSON = LangChosen + "Basic.json";
             }

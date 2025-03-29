@@ -20,10 +20,7 @@ namespace LEALANG_V0
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            string LangChosen = "Python";
-            string DifficultySelected = "Basic";
             new LogIn().ShowDialog();
-           // new Quiz(LangChosen+DifficultySelected).ShowDialog();
             this.Close();
         }
     }

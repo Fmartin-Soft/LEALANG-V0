@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.IdentityModel;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,8 @@ namespace LEALANG_V0
         bool yn = false;
         DateTime lastloginday;
         string check;
+        List<string> langs = new List<string>();
+        long row;
         public int DBReadValint(string Query, string Value, string ValLoc, string ReadLoc)
         {
             //specifying the connection.
@@ -44,6 +47,7 @@ namespace LEALANG_V0
         }
         public string DBReadValstr(string Query, string Value, string ValLoc, string ReadLoc)
         {
+            StringPassed = null;
             //specifying the connection.
             conn = new SqliteConnection("Data Source=LEALANG.db");
             conn.Open();
@@ -230,6 +234,68 @@ namespace LEALANG_V0
             catch (Exception ex) // catching exceptions, hopefully never happens 
             {
                 MessageBox.Show(ex.Message); // show exception
+            }
+        }
+
+        public List<string> GetLangs()
+        {
+
+            conn = new SqliteConnection("Data Source=LEALANG.db");
+            conn.Open();
+            cmd = new SqliteCommand("SELECT * FROM languages", conn); //Specifying the command to use.
+
+            read = cmd.ExecuteReader(); //Reads the result
+
+            while (read.Read()) //While theres rows to read
+            {
+                langs.Add(read["Language"].ToString());  //adding each language found to the list
+            }
+            conn.Close();
+            return langs; // return it 
+        }
+
+
+        //This makes a completely new user and inserts the appropriate data into the right tables
+        public void makenewuser(string fullname, string username, string email, string password, string lang)
+        {
+            int langid = DBReadValint("SELECT * FROM languages WHERE Language = @lang", lang, "@lang", "LangID"); //Gettting the langID so I can insert info into userlang
+            //This is the the users table
+            using (conn = new SqliteConnection("Data Source = LEALANG.db")) //using a using so i can do multiple connectinos
+            {
+                conn.Open();
+                using (cmd = new SqliteCommand("INSERT INTO users (FirstName, LastName, Username, Password, Email) VALUES (@firstname, @lastname, @username, @password, @email); SELECT last_insert_rowid();", conn))
+                {
+                    cmd.Parameters.AddWithValue("@firstname", fullname.Split(' ')[0].ToLower());
+                    cmd.Parameters.AddWithValue("@lastname", fullname.Split(' ')[1].ToLower());
+                    cmd.Parameters.AddWithValue("@username", username.ToLower());
+                    cmd.Parameters.AddWithValue("@password", password);
+                    cmd.Parameters.AddWithValue("@email", email.ToLower());
+                    row = (long)cmd.ExecuteScalar(); // this just gives me the result of the CMD. so execute scalar gives me a single output, which would be the last row
+                }
+            }
+            //this is for userlang
+            using (conn = new SqliteConnection("Data Source = LEALANG.db")) //using a using so i can do multiple connectinos
+            {
+                conn.Open();
+                using (cmd = new SqliteCommand("INSERT INTO userlang (LangID,UserID) VALUES (@langid, @userid)", conn))
+                {
+                    cmd.Parameters.AddWithValue("@langid", langid);
+                    cmd.Parameters.AddWithValue("@userid", row);
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            //this is for userpoints
+            using (conn = new SqliteConnection("Data Source = LEALANG.db")) //using a using so i can do multiple connectinos
+            {
+                conn.Open();
+                using (cmd = new SqliteCommand("INSERT INTO userpoints (UserID,Points,Streak,LastDay) VALUES (@userid, @points, @streak, @lastday)", conn))
+                {
+                    cmd.Parameters.AddWithValue("@userid", row);
+                    cmd.Parameters.AddWithValue("@points", 0);
+                    cmd.Parameters.AddWithValue("@streak", 0);
+                    cmd.Parameters.AddWithValue("@lastday", DateTime.Today.AddDays(-1));
+                    cmd.ExecuteNonQuery();
+                }
             }
         }
     }
