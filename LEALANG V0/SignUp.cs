@@ -68,9 +68,24 @@ namespace LEALANG_V0
                     label5.Visible = true;
                     secondcheck = true;
                 }
+                if (textBox1.Text.Split(' ').Count() != 2)
+                {
+                    label1.Text = "Please enter full name as FIRSTNAME LASTNAME";
+                    label1.Visible = true;
+                    secondcheck = true;
+                }
                 if (secondcheck == false)
                 {
-                    DBFuncs.makenewuser(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, comboBox1.Text);
+                    try
+                    {
+                        DBFuncs.makenewuser(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, comboBox1.Text);
+                        MessageBox.Show("Thank you for creating an account, " + textBox1.Text.Split(' ')[0].ToString());
+                    }
+                    catch ( Exception ex)
+                    {
+                        Console.WriteLine(ex.ToString());
+                        MessageBox.Show("Unexpected error has occured! Please try again!");
+                    }
                 }
             }
         }

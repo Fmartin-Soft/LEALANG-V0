@@ -338,13 +338,13 @@
     },
     {
         "QuestionID": 1,
-        "Question": "Fill in the blank: The keyword _____ is used to declare a block-scoped variable.",
+        "Question": "The keyword _____ is used to declare a block-scoped variable.",
         "Hint": "It was introduced in ES6.",
         "CorrectAnswer": "let"
     },
     {
         "QuestionID": 2,
-        "Question": "Fill in the blank: The keyword _____ declares a constant variable.",
+        "Question": "The keyword _____ declares a constant variable.",
         "Hint": "It creates an unchangeable binding.",
         "CorrectAnswer": "const"
     },
@@ -356,7 +356,7 @@
     },
     {
         "QuestionID": 4,
-        "Question": "Fill in the blank: The function _____ converts a string to a number.",
+        "Question": "The function _____ converts a string to a number.",
         "Hint": "It is a built-in constructor function used for type conversion.",
         "CorrectAnswer": "Number"
     },
@@ -368,7 +368,7 @@
     },
     {
         "QuestionID": 6,
-        "Question": "Fill in the blank: The operator _____ compares both value and type.",
+        "Question": "The operator _____ compares both value and type.",
         "Hint": "It is stricter than ==.",
         "CorrectAnswer": "==="
     },
@@ -380,7 +380,7 @@
     },
     {
         "QuestionID": 8,
-        "Question": "Fill in the blank: The method _____ adds an element to the end of an array.",
+        "Question": "The method _____ adds an element to the end of an array.",
         "Hint": "It mutates the original array.",
         "CorrectAnswer": "push"
     },
@@ -398,7 +398,7 @@
     },
     {
         "QuestionID": 11,
-        "Question": "Fill in the blank: The function _____ converts an object to a JSON string.",
+        "Question": "The function _____ converts an object to a JSON string.",
         "Hint": "It is a static method on the JSON object.",
         "CorrectAnswer": "JSON.stringify"
     },
@@ -410,7 +410,7 @@
     },
     {
         "QuestionID": 13,
-        "Question": "Fill in the blank: The method _____ returns the first index of a given element in an array.",
+        "Question": "The method _____ returns the first index of a given element in an array.",
         "Hint": "It helps locate an element.",
         "CorrectAnswer": "indexOf"
     },
@@ -422,7 +422,7 @@
     },
     {
         "QuestionID": 15,
-        "Question": "Fill in the blank: The symbol _____ is used for single-line comments.",
+        "Question": "The symbol _____ is used for single-line comments.",
         "Hint": "It consists of two forward slashes.",
         "CorrectAnswer": "//"
     },
@@ -434,7 +434,7 @@
     },
     {
         "QuestionID": 17,
-        "Question": "Fill in the blank: The method _____ removes the last element from an array.",
+        "Question": "The method _____ removes the last element from an array.",
         "Hint": "It both returns and removes the element.",
         "CorrectAnswer": "pop"
     },
@@ -446,7 +446,7 @@
     },
     {
         "QuestionID": 19,
-        "Question": "Fill in the blank: The operator _____ checks for equality in value, ignoring type.",
+        "Question": "The operator _____ checks for equality in value, ignoring type.",
         "Hint": "It performs type coercion.",
         "CorrectAnswer": "=="
     },
@@ -458,7 +458,7 @@
     },
     {
         "QuestionID": 21,
-        "Question": "Fill in the blank: The function _____ parses a string and returns an integer.",
+        "Question": "The function _____ parses a string and returns an integer.",
         "Hint": "It is a built-in function for conversion.",
         "CorrectAnswer": "parseInt"
     },
@@ -470,7 +470,7 @@
     },
     {
         "QuestionID": 23,
-        "Question": "Fill in the blank: The method _____ returns a new array with all elements that pass a test.",
+        "Question": "The method _____ returns a new array with all elements that pass a test.",
         "Hint": "It filters the array.",
         "CorrectAnswer": "filter"
     },
@@ -482,7 +482,7 @@
     },
     {
         "QuestionID": 25,
-        "Question": "Fill in the blank: The method _____ returns the largest number among its arguments.",
+        "Question": "The method _____ returns the largest number among its arguments.",
         "Hint": "It is a Math function.",
         "CorrectAnswer": "Math.max"
     },
@@ -494,7 +494,7 @@
     },
     {
         "QuestionID": 27,
-        "Question": "Fill in the blank: The function _____ converts a string into an array of characters.",
+        "Question": "The function _____ converts a string into an array of characters.",
         "Hint": "It splits the string using a delimiter.",
         "CorrectAnswer": "split"
     },
@@ -506,7 +506,7 @@
     },
     {
         "QuestionID": 29,
-        "Question": "Fill in the blank: The keyword _____ is used to declare a function expression.",
+        "Question": "The keyword _____ is used to declare a function expression.",
         "Hint": "It precedes a function definition in an expression.",
         "CorrectAnswer": "function"
     }

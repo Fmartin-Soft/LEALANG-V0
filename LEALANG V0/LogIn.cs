@@ -8,13 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.Sqlite;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace LEALANG_V0
 {
     
     public partial class LogIn : Form
     {
-
         //basic login variables that are needed
         string uname;
         string pword;
@@ -93,6 +93,23 @@ namespace LEALANG_V0
             this.Hide();
             new SignUp().ShowDialog();
             this.Close();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            switch (textBox2.UseSystemPasswordChar)
+            {
+                case true:
+                    textBox2.UseSystemPasswordChar = false;
+                    button3.Text = "👁";
+                    break;
+                case false:
+                    textBox2.UseSystemPasswordChar = true;
+                    button3.Text = "-";
+                    break;
+            }
+
+
         }
     }
 }

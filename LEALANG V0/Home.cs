@@ -21,6 +21,8 @@ namespace LEALANG_V0
         string ValLoc;
         string LangDif;
         string nameID;
+        int streak;
+        string lastlogday;
         SqliteDataReader read;
         DatabaseFunctions DBFuncs = new DatabaseFunctions();
         public Home(string LangChosen, string nameid , int score= 0)
@@ -32,23 +34,31 @@ namespace LEALANG_V0
             {
                 score = DBFuncs.GetScore(score, nameID);
                 DBFuncs.UpdateScore(score, nameID);
-
             }
+            score = DBFuncs.DBReadValint("SELECT * FROM userpoints WHERE UserID = @userid",nameid,"userid","Points");
+            label3.Text = "Total Correct Answers: " + score;
+            streak = DBFuncs.DBReadValint("SELECT * FROM userpoints WHERE UserID = @userid", nameid, "@userid", "Streak");
+            lastlogday = DBFuncs.LastLoginCheck(nameid);
+            if (lastlogday != "neut")
+            {
+                //If the user hasnt updated their streak set the streak image to the off one?
+                pictureBox1.Image = Properties.Resources.Fireless;
+            }
+            else
+            {
+                pictureBox1.Image = Properties.Resources.Fire;
+            }
+            label4.Text = "Streak: " + streak + " Days!";
             Query = "SELECT * FROM users WHERE UserID = @userID";
             ValLoc = "@userID";
-            read = DBFuncs.DBReadVal(Query, nameid, ValLoc);
-            while (read.Read())
-            {
-                Name = read["FirstName"].ToString();
-            }
-            label2.Text = "Welcome: " + Name;
-            
+            Name = DBFuncs.DBReadValstr(Query, nameid, ValLoc, "FirstName");
+            Name = Char.ToUpper(Name[0]) + Name.Substring(1); //just makes the name go from name to Name
+            label2.Text = "Welcome back " + Name + "!";
+
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            
-
             this.Hide();
             new Quiz(ChosenLang,nameID).ShowDialog();
             this.Close();
@@ -59,5 +69,6 @@ namespace LEALANG_V0
         {
             this.Close();
         }
+
     }
 }

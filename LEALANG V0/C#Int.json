@@ -1,31 +1,516 @@
 {
+  "State": [
+    {
+      "QuestionID": 0,
+      "Question": "Fill in the blank: The async keyword in a method signature indicates that the method returns a ______.",
+      "Hint": "Typically, an asynchronous method returns a Task or Task<T>.",
+      "CorrectAnswer": "Task"
+    },
+    {
+      "QuestionID": 1,
+      "Question": "Fill in the blank: The operator '??' is known as the ______ operator.",
+      "Hint": "It returns the left-hand operand if it is not null; otherwise, it returns the right-hand operand.",
+      "CorrectAnswer": "null-coalescing"
+    },
+    {
+      "QuestionID": 2,
+      "Question": "Fill in the blank: To wait for an asynchronous operation to complete, you use the ______ keyword.",
+      "Hint": "It allows a method to pause execution until a Task completes.",
+      "CorrectAnswer": "await"
+    },
+    {
+      "QuestionID": 3,
+      "Question": "Fill in the blank: A lambda expression in C# uses the ______ operator to separate its parameters from its body.",
+      "Hint": "It is pronounced 'goes to'.",
+      "CorrectAnswer": "=>"
+    },
+    {
+      "QuestionID": 4,
+      "Question": "Fill in the blank: The using statement ensures that IDisposable objects are ______ after use.",
+      "Hint": "They are automatically cleaned up.",
+      "CorrectAnswer": "disposed"
+    },
+    {
+      "QuestionID": 5,
+      "Question": "Fill in the blank: An extension method is defined by adding the ______ keyword to the first parameter of a static method.",
+      "Hint": "This keyword designates the parameter as the object being extended.",
+      "CorrectAnswer": "this"
+    },
+    {
+      "QuestionID": 6,
+      "Question": "Fill in the blank: The keyword ______ is used to declare an anonymous method.",
+      "Hint": "It precedes a method body without a name.",
+      "CorrectAnswer": "delegate"
+    },
+    {
+      "QuestionID": 7,
+      "Question": "Fill in the blank: In generic constraints, the keyword ______ allows you to specify that a type must implement a particular interface.",
+      "Hint": "It is used in the constraint clause following the type parameter.",
+      "CorrectAnswer": "where"
+    },
+    {
+      "QuestionID": 8,
+      "Question": "Fill in the blank: The ______ operator allows user-defined implicit conversions between types.",
+      "Hint": "It is used to declare conversion operators.",
+      "CorrectAnswer": "implicit"
+    },
+    {
+      "QuestionID": 9,
+      "Question": "Fill in the blank: The ______ keyword indicates that a method is asynchronous and can contain an await expression.",
+      "Hint": "It modifies the method signature.",
+      "CorrectAnswer": "async"
+    },
+    {
+      "QuestionID": 10,
+      "Question": "Fill in the blank: The LINQ method ______ projects each element of a sequence into a new form.",
+      "Hint": "It is used for transforming data.",
+      "CorrectAnswer": "Select"
+    },
+    {
+      "QuestionID": 11,
+      "Question": "Fill in the blank: A foreach loop iterates over an ______ collection.",
+      "Hint": "The collection must implement IEnumerable.",
+      "CorrectAnswer": "enumerable"
+    },
+    {
+      "QuestionID": 12,
+      "Question": "Fill in the blank: To compare two objects for value equality, override the ______ method.",
+      "Hint": "This method is inherited from System.Object.",
+      "CorrectAnswer": "Equals"
+    },
+    {
+      "QuestionID": 13,
+      "Question": "Fill in the blank: To provide a custom hash code for an object, override the ______ method.",
+      "Hint": "It is used in hash-based collections.",
+      "CorrectAnswer": "GetHashCode"
+    },
+    {
+      "QuestionID": 14,
+      "Question": "Fill in the blank: The keyword ______ allows a method to accept a variable number of parameters.",
+      "Hint": "It is placed before the parameter in the method signature.",
+      "CorrectAnswer": "params"
+    },
+    {
+      "QuestionID": 15,
+      "Question": "Fill in the blank: To round a floating-point number to the nearest integer, you can use the ______ method from the Math class.",
+      "Hint": "It rounds according to standard rounding rules.",
+      "CorrectAnswer": "Math.Round"
+    },
+    {
+      "QuestionID": 16,
+      "Question": "Fill in the blank: The ______ operator (written as '??') is used to provide a default value when a value is null.",
+      "Hint": "It’s also known as the null-coalescing operator.",
+      "CorrectAnswer": "??"
+    },
+    {
+      "QuestionID": 17,
+      "Question": "Fill in the blank: The LINQ method ______ sorts the elements of a sequence in ascending order.",
+      "Hint": "It is commonly used before selecting or grouping data.",
+      "CorrectAnswer": "OrderBy"
+    },
+    {
+      "QuestionID": 18,
+      "Question": "Fill in the blank: Appending a ______ symbol to a value type makes it nullable.",
+      "Hint": "It is placed after the type name.",
+      "CorrectAnswer": "?"
+    },
+    {
+      "QuestionID": 19,
+      "Question": "Fill in the blank: The ______ keyword is used to hide a member inherited from a base class.",
+      "Hint": "It provides a new implementation that hides the base member.",
+      "CorrectAnswer": "new"
+    },
+    {
+      "QuestionID": 20,
+      "Question": "Fill in the blank: The ______ keyword is used to define an abstract class that cannot be instantiated.",
+      "Hint": "It signals that the class is incomplete.",
+      "CorrectAnswer": "abstract"
+    },
+    {
+      "QuestionID": 21,
+      "Question": "Fill in the blank: To declare an abstract method in an abstract class, use the ______ keyword.",
+      "Hint": "The method has no body.",
+      "CorrectAnswer": "abstract"
+    },
+    {
+      "QuestionID": 22,
+      "Question": "Fill in the blank: In a try-catch-finally block, the ______ block always executes regardless of exceptions.",
+      "Hint": "It is used for cleanup.",
+      "CorrectAnswer": "finally"
+    },
+    {
+      "QuestionID": 23,
+      "Question": "Fill in the blank: The ______ method on a delegate starts asynchronous execution.",
+      "Hint": "It typically starts with 'Begin'.",
+      "CorrectAnswer": "BeginInvoke"
+    },
+    {
+      "QuestionID": 24,
+      "Question": "Fill in the blank: To cancel an asynchronous operation, you typically pass a ______ token.",
+      "Hint": "It is used to signal cancellation.",
+      "CorrectAnswer": "cancellation"
+    },
+    {
+      "QuestionID": 25,
+      "Question": "Fill in the blank: The ______ pattern provides a simplified interface to a complex subsystem.",
+      "Hint": "It is one of the common design patterns.",
+      "CorrectAnswer": "Facade"
+    },
+    {
+      "QuestionID": 26,
+      "Question": "Fill in the blank: The ______ operator is used to check if an object is of a specific type.",
+      "Hint": "It returns true if the object is compatible with the given type.",
+      "CorrectAnswer": "is"
+    },
+    {
+      "QuestionID": 27,
+      "Question": "Fill in the blank: The ______ operator performs a bitwise AND on two operands.",
+      "Hint": "It is a single ampersand.",
+      "CorrectAnswer": "&"
+    },
+    {
+      "QuestionID": 28,
+      "Question": "Fill in the blank: In generic constraints, to restrict a type parameter to reference types, use the ______ constraint.",
+      "Hint": "It is specified after the type parameter.",
+      "CorrectAnswer": "class"
+    },
+    {
+      "QuestionID": 29,
+      "Question": "Fill in the blank: To hide a base class member with a new implementation, use the ______ keyword in the derived class.",
+      "Hint": "It signals that the derived member hides the base member.",
+      "CorrectAnswer": "new"
+    }
+  ],
   "Multi": [
     {
       "QuestionID": 0,
-      "Question": "A two letter statement to compare values",
-      "Answers": [ "if()", "IF()", "What If()", "Else If()" ],
-      "CorrectAnswer": "if()"
+      "Question": "What is the return type of an async method that does not return any value?",
+      "Answers": [
+        "void",
+        "Task",
+        "Task<void>",
+        "Async"
+      ],
+      "CorrectAnswer": "Task"
     },
     {
       "QuestionID": 1,
-      "Question": "This statement will make the program loop until a condition has been met",
-      "Answers": [ "for()", "while()", "until()", "go()" ],
-      "CorrectAnswer": "for()"
-    }
-
-  ],
-  "cState": [
-    {
-      "QuestionID": 0,
-      "Hint": "_____________(...)",
-      "CorrectAnswer": "Console.Write",
-      "Question": "How do we output something?"
+      "Question": "Which operator is known as the null-coalescing operator?",
+      "Answers": [
+        "??",
+        "?:",
+        "??:",
+        "?!"
+      ],
+      "CorrectAnswer": "??"
     },
     {
-      "QuestionID": 1,
-      "Hint": "_______ ____(... , ...){}",
-      "CorrectAnswer": "private void",
-      "Question": "How do we delcare/start a function?"
+      "QuestionID": 2,
+      "Question": "Which LINQ method projects each element of a sequence into a new form?",
+      "Answers": [
+        "Select",
+        "Where",
+        "Aggregate",
+        "OrderBy"
+      ],
+      "CorrectAnswer": "Select"
+    },
+    {
+      "QuestionID": 3,
+      "Question": "What does the 'await' keyword do in an asynchronous method?",
+      "Answers": [
+        "Pauses method execution until a Task completes",
+        "Runs code in parallel",
+        "Starts a new thread",
+        "Immediately returns control"
+      ],
+      "CorrectAnswer": "Pauses method execution until a Task completes"
+    },
+    {
+      "QuestionID": 4,
+      "Question": "Which symbol is used to declare a lambda expression?",
+      "Answers": [
+        "=>",
+        "->",
+        "lambda",
+        "function"
+      ],
+      "CorrectAnswer": "=>"
+    },
+    {
+      "QuestionID": 5,
+      "Question": "What is the purpose of the using statement?",
+      "Answers": [
+        "Automatically disposes of objects",
+        "Imports namespaces",
+        "Declares a variable",
+        "Defines a block scope"
+      ],
+      "CorrectAnswer": "Automatically disposes of objects"
+    },
+    {
+      "QuestionID": 6,
+      "Question": "How do you define an extension method?",
+      "Answers": [
+        "By using the 'this' keyword on the first parameter",
+        "By using the 'extension' keyword",
+        "By inheriting from ExtensionBase",
+        "By declaring the method inside a non-static class"
+      ],
+      "CorrectAnswer": "By using the 'this' keyword on the first parameter"
+    },
+    {
+      "QuestionID": 7,
+      "Question": "Which keyword is used to declare an anonymous method?",
+      "Answers": [
+        "delegate",
+        "lambda",
+        "anon",
+        "func"
+      ],
+      "CorrectAnswer": "delegate"
+    },
+    {
+      "QuestionID": 8,
+      "Question": "Which constraint keyword is used to restrict a generic type to reference types?",
+      "Answers": [
+        "class",
+        "struct",
+        "new",
+        "interface"
+      ],
+      "CorrectAnswer": "class"
+    },
+    {
+      "QuestionID": 9,
+      "Question": "Which keyword allows for user-defined implicit conversions?",
+      "Answers": [
+        "implicit",
+        "explicit",
+        "convert",
+        "operator"
+      ],
+      "CorrectAnswer": "implicit"
+    },
+    {
+      "QuestionID": 10,
+      "Question": "What is the purpose of the async keyword?",
+      "Answers": [
+        "It indicates an asynchronous method",
+        "It runs a method on a separate thread",
+        "It creates a new Task",
+        "It synchronizes thread execution"
+      ],
+      "CorrectAnswer": "It indicates an asynchronous method"
+    },
+    {
+      "QuestionID": 11,
+      "Question": "Which LINQ method filters a sequence based on a predicate?",
+      "Answers": [
+        "Where",
+        "Select",
+        "Aggregate",
+        "Join"
+      ],
+      "CorrectAnswer": "Where"
+    },
+    {
+      "QuestionID": 12,
+      "Question": "Which loop construct is used to iterate over an enumerable collection?",
+      "Answers": [
+        "foreach",
+        "for",
+        "while",
+        "do-while"
+      ],
+      "CorrectAnswer": "foreach"
+    },
+    {
+      "QuestionID": 13,
+      "Question": "Why would you override the Equals method in a class?",
+      "Answers": [
+        "To define custom equality for objects",
+        "To compare object references",
+        "To generate a hash code",
+        "To convert an object to a string"
+      ],
+      "CorrectAnswer": "To define custom equality for objects"
+    },
+    {
+      "QuestionID": 14,
+      "Question": "Which method should be overridden along with Equals?",
+      "Answers": [
+        "GetHashCode",
+        "ToString",
+        "CompareTo",
+        "Finalize"
+      ],
+      "CorrectAnswer": "GetHashCode"
+    },
+    {
+      "QuestionID": 15,
+      "Question": "Which keyword allows a method to accept a variable number of parameters?",
+      "Answers": [
+        "params",
+        "var",
+        "dynamic",
+        "args"
+      ],
+      "CorrectAnswer": "params"
+    },
+    {
+      "QuestionID": 16,
+      "Question": "Which Math method rounds a number to the nearest integer?",
+      "Answers": [
+        "Math.Round",
+        "Math.Floor",
+        "Math.Ceiling",
+        "Math.Truncate"
+      ],
+      "CorrectAnswer": "Math.Round"
+    },
+    {
+      "QuestionID": 17,
+      "Question": "Which operator performs null-coalescing assignment in C# 8.0 and later?",
+      "Answers": [
+        "??=",
+        "?=",
+        "?:",
+        "?!="
+      ],
+      "CorrectAnswer": "??="
+    },
+    {
+      "QuestionID": 18,
+      "Question": "What is the purpose of the OrderBy LINQ method?",
+      "Answers": [
+        "To sort elements in ascending order",
+        "To group elements",
+        "To filter elements",
+        "To select elements"
+      ],
+      "CorrectAnswer": "To sort elements in ascending order"
+    },
+    {
+      "QuestionID": 19,
+      "Question": "Which keyword allows you to hide a base class member in a derived class?",
+      "Answers": [
+        "new",
+        "override",
+        "virtual",
+        "sealed"
+      ],
+      "CorrectAnswer": "new"
+    },
+    {
+      "QuestionID": 20,
+      "Question": "Which operator performs a bitwise AND operation?",
+      "Answers": [
+        "&",
+        "&&",
+        "|",
+        "||"
+      ],
+      "CorrectAnswer": "&"
+    },
+    {
+      "QuestionID": 21,
+      "Question": "Which method on a delegate is used to invoke it asynchronously?",
+      "Answers": [
+        "BeginInvoke",
+        "EndInvoke",
+        "InvokeAsync",
+        "AsyncInvoke"
+      ],
+      "CorrectAnswer": "BeginInvoke"
+    },
+    {
+      "QuestionID": 22,
+      "Question": "Which generic constraint restricts a type parameter to value types?",
+      "Answers": [
+        "where T : struct",
+        "where T : class",
+        "where T : new()",
+        "where T : IEnumerable"
+      ],
+      "CorrectAnswer": "where T : struct"
+    },
+    {
+      "QuestionID": 23,
+      "Question": "What does the 'yield return' statement do?",
+      "Answers": [
+        "Returns each element of an iterator one at a time",
+        "Exits a method immediately",
+        "Breaks out of a loop",
+        "Returns an array"
+      ],
+      "CorrectAnswer": "Returns each element of an iterator one at a time"
+    },
+    {
+      "QuestionID": 24,
+      "Question": "Which keyword is used to define an abstract method?",
+      "Answers": [
+        "abstract",
+        "virtual",
+        "override",
+        "sealed"
+      ],
+      "CorrectAnswer": "abstract"
+    },
+    {
+      "QuestionID": 25,
+      "Question": "Which operator returns one of two values based on a condition?",
+      "Answers": [
+        "?:",
+        "??",
+        "&&",
+        "||"
+      ],
+      "CorrectAnswer": "?:"
+    },
+    {
+      "QuestionID": 26,
+      "Question": "What is the purpose of a cancellation token in asynchronous programming?",
+      "Answers": [
+        "To signal cancellation of an operation",
+        "To pause execution",
+        "To restart a task",
+        "To synchronize threads"
+      ],
+      "CorrectAnswer": "To signal cancellation of an operation"
+    },
+    {
+      "QuestionID": 27,
+      "Question": "Which keyword prevents a class from being inherited further?",
+      "Answers": [
+        "sealed",
+        "static",
+        "abstract",
+        "readonly"
+      ],
+      "CorrectAnswer": "sealed"
+    },
+    {
+      "QuestionID": 28,
+      "Question": "Which method converts an object to its string representation?",
+      "Answers": [
+        "ToString()",
+        "Parse()",
+        "Convert()",
+        "GetString()"
+      ],
+      "CorrectAnswer": "ToString()"
+    },
+    {
+      "QuestionID": 29,
+      "Question": "Which keyword is used to declare an event within a class?",
+      "Answers": [
+        "event",
+        "delegate",
+        "public",
+        "var"
+      ],
+      "CorrectAnswer": "event"
     }
   ]
 }

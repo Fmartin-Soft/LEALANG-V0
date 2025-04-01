@@ -339,7 +339,7 @@
     },
     {
         "QuestionID": 1,
-        "Question": "Fill in the blank: The method _____ creates a new array with the results of calling a provided function on every element.",
+        "Question": "The method _____ creates a new array with the results of calling a provided function on every element.",
         "Hint": "It is a higher-order array method.",
         "CorrectAnswer": "map"
     },
@@ -351,7 +351,7 @@
     },
     {
         "QuestionID": 3,
-        "Question": "Fill in the blank: The method _____ returns the first index at which a given element is found.",
+        "Question": "The method _____ returns the first index at which a given element is found.",
         "Hint": "It is used to locate an element in an array.",
         "CorrectAnswer": "indexOf"
     },
@@ -363,7 +363,7 @@
     },
     {
         "QuestionID": 5,
-        "Question": "Fill in the blank: An arrow function is defined using the symbol _____ .",
+        "Question": "An arrow function is defined using the symbol _____ .",
         "Hint": "It appears between the parameter list and the function body.",
         "CorrectAnswer": "=>"
     },
@@ -375,7 +375,7 @@
     },
     {
         "QuestionID": 7,
-        "Question": "Fill in the blank: The method _____ converts a JSON string into a JavaScript object.",
+        "Question": "The method _____ converts a JSON string into a JavaScript object.",
         "Hint": "It is a static method on the JSON object.",
         "CorrectAnswer": "JSON.parse"
     },
@@ -387,7 +387,7 @@
     },
     {
         "QuestionID": 9,
-        "Question": "Fill in the blank: The method _____ returns a new array containing all elements that pass a test.",
+        "Question": "The method _____ returns a new array containing all elements that pass a test.",
         "Hint": "It filters the array based on a condition.",
         "CorrectAnswer": "filter"
     },
@@ -399,7 +399,7 @@
     },
     {
         "QuestionID": 11,
-        "Question": "Fill in the blank: The operator _____ returns the remainder after division.",
+        "Question": "The operator _____ returns the remainder after division.",
         "Hint": "It is used for modulus operations.",
         "CorrectAnswer": "%"
     },
@@ -411,7 +411,7 @@
     },
     {
         "QuestionID": 13,
-        "Question": "Fill in the blank: The method _____ removes the first element from an array.",
+        "Question": "The method _____ removes the first element from an array.",
         "Hint": "It shifts the array elements.",
         "CorrectAnswer": "shift"
     },
@@ -423,7 +423,7 @@
     },
     {
         "QuestionID": 15,
-        "Question": "Fill in the blank: The method _____ joins all elements of an array into a string.",
+        "Question": "The method _____ joins all elements of an array into a string.",
         "Hint": "It concatenates array elements.",
         "CorrectAnswer": "join"
     },
@@ -435,7 +435,7 @@
     },
     {
         "QuestionID": 17,
-        "Question": "Fill in the blank: The method _____ returns the first element in an array that satisfies a provided testing function.",
+        "Question": "The method _____ returns the first element in an array that satisfies a provided testing function.",
         "Hint": "It is used to locate an element by condition.",
         "CorrectAnswer": "find"
     },
@@ -447,7 +447,7 @@
     },
     {
         "QuestionID": 19,
-        "Question": "Fill in the blank: The function _____ converts a string to an integer.",
+        "Question": "The function _____ converts a string to an integer.",
         "Hint": "It is a built-in conversion function.",
         "CorrectAnswer": "parseInt"
     },
@@ -459,7 +459,7 @@
     },
     {
         "QuestionID": 21,
-        "Question": "Fill in the blank: The operator _____ performs exponentiation.",
+        "Question": "The operator _____ performs exponentiation.",
         "Hint": "It raises a number to a power.",
         "CorrectAnswer": "**"
     },
@@ -471,7 +471,7 @@
     },
     {
         "QuestionID": 23,
-        "Question": "Fill in the blank: The method _____ returns the last element from an array and removes it.",
+        "Question": "The method _____ returns the last element from an array and removes it.",
         "Hint": "It modifies the array by removing its final element.",
         "CorrectAnswer": "pop"
     },
@@ -483,7 +483,7 @@
     },
     {
         "QuestionID": 25,
-        "Question": "Fill in the blank: The method _____ finds the index of the last occurrence of a specified value in an array.",
+        "Question": "The method _____ finds the index of the last occurrence of a specified value in an array.",
         "Hint": "It searches from the end of the array.",
         "CorrectAnswer": "lastIndexOf"
     },
@@ -495,7 +495,7 @@
     },
     {
         "QuestionID": 27,
-        "Question": "Fill in the blank: The function _____ rounds a number down to the nearest integer.",
+        "Question": "The function _____ rounds a number down to the nearest integer.",
         "Hint": "It is a Math method.",
         "CorrectAnswer": "Math.floor"
     },
@@ -507,7 +507,7 @@
     },
     {
         "QuestionID": 29,
-        "Question": "Fill in the blank: The operator _____ returns the type of a variable as a string.",
+        "Question": "The operator _____ returns the type of a variable as a string.",
         "Hint": "It is used for type checking.",
         "CorrectAnswer": "typeof"
     }
