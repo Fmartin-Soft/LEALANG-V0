@@ -27,78 +27,67 @@ namespace LEALANG_V0
         string check;
         List<string> langs = new List<string>();
         long row;
+
+        //inputs a query and a few other things outputs a integer
         public int DBReadValint(string Query, string Value, string ValLoc, string ReadLoc)
         {
-            //specifying the connection.
-            conn = new SqliteConnection("Data Source=LEALANG.db");
+            
+            conn = new SqliteConnection("Data Source=LEALANG.db"); //specifying the connection.
             conn.Open();
-            //Specifying the command to use. The Query is specified in code
-            cmd = new SqliteCommand(Query, conn);
-            //Specifies what the missing entry is in the query
-            cmd.Parameters.AddWithValue(ValLoc, Value);
-            //Reads the result
-            read = cmd.ExecuteReader();
-            //Returns Read to be able to manipulate it and read what we want after the query
-            while (read.Read())
+            
+            cmd = new SqliteCommand(Query, conn); //Specifying the command to use. The Query is specified in code
+            
+            cmd.Parameters.AddWithValue(ValLoc, Value); //Specifies what the missing entry is in the query
+            
+            read = cmd.ExecuteReader(); //Reads the result
+            
+            while (read.Read()) //Returns a int
             {
                 IntegerPassed = Convert.ToInt32(read[ReadLoc]);
             }
             return IntegerPassed;
         }
+
+        //inputs a query and a few other things outputs a string
         public string DBReadValstr(string Query, string Value, string ValLoc, string ReadLoc)
         {
             StringPassed = null;
-            //specifying the connection.
-            conn = new SqliteConnection("Data Source=LEALANG.db");
+            
+            conn = new SqliteConnection("Data Source=LEALANG.db"); //specifying the connection.
             conn.Open();
-            //Specifying the command to use. The Query is specified in code
-            cmd = new SqliteCommand(Query, conn);
-            //Specifies what the missing entry is in the query
-            cmd.Parameters.AddWithValue(ValLoc, Value);
-            //Reads the result
-            read = cmd.ExecuteReader();
-            //Returns Read to be able to manipulate it and read what we want after the query
-            while (read.Read())
+           
+            cmd = new SqliteCommand(Query, conn);  //Specifying the command to use. The Query is specified in code
+            
+            cmd.Parameters.AddWithValue(ValLoc, Value); //Specifies what the missing entry is in the query
+            
+            read = cmd.ExecuteReader(); //Reads the result
+            
+            while (read.Read()) // Returns a string
             {
                 StringPassed = read[ReadLoc].ToString();
             }
             return StringPassed;
         }
 
-        public SqliteDataReader DBReadVal(string Query, string Value, string ValLoc)
-        {
-            //specifying the connection.
-            conn = new SqliteConnection("Data Source=LEALANG.db");
-            conn.Open();
-            //Specifying the command to use. The Query is specified in code
-            cmd = new SqliteCommand(Query, conn);
-            //Specifies what the missing entry is in the query
-            cmd.Parameters.AddWithValue(ValLoc, Value);
-            //Reads the result
-            read = cmd.ExecuteReader();
-            return read;
-
-        }
-
         //this is for the login form. Returns True if the password has been found
         public bool PassCheck(string Uname, string Pword)
         {
-            //specifying the connection. Only use it while using the "using" method.
-            using (conn = new SqliteConnection("Data Source=LEALANG.db"))
+            
+            using (conn = new SqliteConnection("Data Source=LEALANG.db")) //specifying the connection. Only use it while using the "using" method.
             {
                 conn.Open();
-                //Specifying the command to use. The Query is specified in code
-                cmd = new SqliteCommand("SELECT * FROM users WHERE Username = @uname", conn);
-                //Specifies what the missing entry is in the query
-                cmd.Parameters.AddWithValue("@uname", Uname.ToLower());
-                //Reads the result
-                using (read = cmd.ExecuteReader())
+                
+                cmd = new SqliteCommand("SELECT * FROM users WHERE Username = @uname", conn); //Specifying the command to use. The Query is specified in code
+                
+                cmd.Parameters.AddWithValue("@uname", Uname.ToLower()); //Specifies what the missing entry is in the query
+                
+                using (read = cmd.ExecuteReader()) //Reads the result
                 {
-                    //While its reading do stuff
-                    while (read.Read())
+                    
+                    while (read.Read()) //While its reading do stuff
                     {
-                        //In this instant the text between the [] is the table column name
-                        if (read["Password"].ToString() == Pword)
+                        
+                        if (read["Password"].ToString() == Pword) //In this instant the text between the [] is the table column name
                         {
 
                             yn = true;

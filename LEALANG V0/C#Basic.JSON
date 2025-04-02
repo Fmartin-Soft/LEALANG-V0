@@ -1,516 +1,517 @@
 {
-  "State": [
-    {
-      "QuestionID": 0,
-      "Question": "The method ______ is used to write output to the console.",
-      "Hint": "It starts with 'Console.'",
-      "CorrectAnswer": "Console.WriteLine"
-    },
-    {
-      "QuestionID": 1,
-      "Question": "The keyword ______ is used to declare a class.",
-      "Hint": "It starts with 'c'.",
-      "CorrectAnswer": "class"
-    },
-    {
-      "QuestionID": 2,
-      "Question": "The keyword ______ is used to declare a function that does not return any value.",
-      "Hint": "It means 'nothing'.",
-      "CorrectAnswer": "void"
-    },
-    {
-      "QuestionID": 3,
-      "Question": "The keyword ______ is used to create a new instance of an object.",
-      "Hint": "It instantiates an object.",
-      "CorrectAnswer": "new"
-    },
-    {
-      "QuestionID": 4,
-      "Question": "The property ______ returns the number of elements in an array.",
-      "Hint": "It is capitalized.",
-      "CorrectAnswer": "Length"
-    },
-    {
-      "QuestionID": 5,
-      "Question": "The keyword ______ is used to declare an interface.",
-      "Hint": "It's a reserved word for interfaces.",
-      "CorrectAnswer": "interface"
-    },
-    {
-      "QuestionID": 6,
-      "Question": "In a class declaration, inheritance is denoted by the symbol ______.",
-      "Hint": "It is a punctuation mark.",
-      "CorrectAnswer": ":"
-    },
-    {
-      "QuestionID": 7,
-      "Question": "The keyword ______ is used to override a base class method.",
-      "Hint": "It allows a method to be replaced in a derived class.",
-      "CorrectAnswer": "override"
-    },
-    {
-      "QuestionID": 8,
-      "Question": "The keyword ______ marks a method as one that can be overridden in derived classes.",
-      "Hint": "It suggests that the method's behavior is virtual.",
-      "CorrectAnswer": "virtual"
-    },
-    {
-      "QuestionID": 9,
-      "Question": "The block starting with ______ is used to attempt code that might throw an exception.",
-      "Hint": "It begins an exception handling structure.",
-      "CorrectAnswer": "try"
-    },
-    {
-      "QuestionID": 10,
-      "Question": "The block starting with ______ is used to catch exceptions.",
-      "Hint": "It follows a try block.",
-      "CorrectAnswer": "catch"
-    },
-    {
-      "QuestionID": 11,
-      "Question": "The block starting with ______ is used to perform cleanup after exception handling.",
-      "Hint": "It always executes after try/catch.",
-      "CorrectAnswer": "finally"
-    },
-    {
-      "QuestionID": 12,
-      "Question": "The keyword ______ is used to declare a constant field.",
-      "Hint": "It signifies an unchangeable value.",
-      "CorrectAnswer": "const"
-    },
-    {
-      "QuestionID": 13,
-      "Question": "The keyword ______ is used to declare a read-only field that can only be assigned during declaration or in a constructor.",
-      "Hint": "It ensures the value cannot change after initialization.",
-      "CorrectAnswer": "readonly"
-    },
-    {
-      "QuestionID": 14,
-      "Question": "The method ______ returns the runtime type of an object.",
-      "Hint": "It is inherited from System.Object.",
-      "CorrectAnswer": "GetType"
-    },
-    {
-      "QuestionID": 15,
-      "Question": "The keyword ______ is used to declare a static member.",
-      "Hint": "It indicates that the member belongs to the type rather than an instance.",
-      "CorrectAnswer": "static"
-    },
-    {
-      "QuestionID": 16,
-      "Question": "The keyword ______ allows a class definition to be split across multiple files.",
-      "Hint": "It is used when a class is divided into parts.",
-      "CorrectAnswer": "partial"
-    },
-    {
-      "QuestionID": 17,
-      "Question": "The operator ______ is used to concatenate strings.",
-      "Hint": "It is also used for addition.",
-      "CorrectAnswer": "+"
-    },
-    {
-      "QuestionID": 18,
-      "Question": "The method ______ converts a string to an integer.",
-      "Hint": "It is a static method on the int type.",
-      "CorrectAnswer": "int.Parse"
-    },
-    {
-      "QuestionID": 19,
-      "Question": "The keyword ______ is used to declare a namespace.",
-      "Hint": "It organizes classes and other types.",
-      "CorrectAnswer": "namespace"
-    },
-    {
-      "QuestionID": 20,
-      "Question": "The directive ______ is used to include a namespace in a file.",
-      "Hint": "It appears at the top of the file.",
-      "CorrectAnswer": "using"
-    },
-    {
-      "QuestionID": 21,
-      "Question": "The operator ______ returns the remainder of a division operation.",
-      "Hint": "It is represented by a percent sign.",
-      "CorrectAnswer": "%"
-    },
-    {
-      "QuestionID": 22,
-      "Question": "The keyword ______ is used to define a structure.",
-      "Hint": "It is similar to a class but a value type.",
-      "CorrectAnswer": "struct"
-    },
-    {
-      "QuestionID": 23,
-      "Question": "The method ______ compares two strings for equality in a case-sensitive manner.",
-      "Hint": "It is often used for string comparisons.",
-      "CorrectAnswer": "Equals"
-    },
-    {
-      "QuestionID": 24,
-      "Question": "The operator ______ checks for equality between two values.",
-      "Hint": "It is used to compare numbers and objects.",
-      "CorrectAnswer": "=="
-    },
-    {
-      "QuestionID": 25,
-      "Question": "The keyword ______ allows a derived class to call a member of its base class.",
-      "Hint": "It refers to the base class.",
-      "CorrectAnswer": "base"
-    },
-    {
-      "QuestionID": 26,
-      "Question": "The keyword ______ is used to declare a delegate type.",
-      "Hint": "It specifies a reference to a method.",
-      "CorrectAnswer": "delegate"
-    },
-    {
-      "QuestionID": 27,
-      "Question": "The keyword ______ is used to declare an event within a class.",
-      "Hint": "It is paired with delegate types.",
-      "CorrectAnswer": "event"
-    },
-    {
-      "QuestionID": 28,
-      "Question": "The keyword ______ prevents a class from being inherited.",
-      "Hint": "It seals the class.",
-      "CorrectAnswer": "sealed"
-    },
-    {
-      "QuestionID": 29,
-      "Question": "The method ______ converts an object to its string representation.",
-      "Hint": "It is inherited from System.Object.",
-      "CorrectAnswer": "ToString"
-    }
-  ],
-  "Multi": [
-    {
-      "QuestionID": 0,
-      "Question": "Which keyword is used to define a class?",
-      "Answers": [
-        "class",
-        "struct",
-        "interface",
-        "object"
-      ],
-      "CorrectAnswer": "class"
-    },
-    {
-      "QuestionID": 1,
-      "Question": "Which keyword is used to create an instance of an object?",
-      "Answers": [
-        "new",
-        "create",
-        "instance",
-        "init"
-      ],
-      "CorrectAnswer": "new"
-    },
-    {
-      "QuestionID": 2,
-      "Question": "Which access modifier restricts access to the containing class only?",
-      "Answers": [
-        "private",
-        "public",
-        "protected",
-        "internal"
-      ],
-      "CorrectAnswer": "private"
-    },
-    {
-      "QuestionID": 3,
-      "Question": "What is the output of Console.WriteLine(5 + 3 * 2); ?",
-      "Answers": [
-        "11",
-        "16",
-        "13",
-        "10"
-      ],
-      "CorrectAnswer": "11"
-    },
-    {
-      "QuestionID": 4,
-      "Question": "Which property returns the number of elements in an array?",
-      "Answers": [
-        "Length",
-        "Count",
-        "size",
-        "Length"
-      ],
-      "CorrectAnswer": "Length"
-    },
-    {
-      "QuestionID": 5,
-      "Question": "Which symbol is used for inheritance in a class declaration?",
-      "Answers": [
-        ":",
-        "extends",
-        "inherits",
-        "implements"
-      ],
-      "CorrectAnswer": ":"
-    },
-    {
-      "QuestionID": 6,
-      "Question": "What is the default value of a boolean variable?",
-      "Answers": [
-        "false",
-        "true",
-        "null",
-        "0"
-      ],
-      "CorrectAnswer": "false"
-    },
-    {
-      "QuestionID": 7,
-      "Question": "Which keyword is used to begin an exception handling block?",
-      "Answers": [
-        "try",
-        "catch",
-        "throw",
-        "error"
-      ],
-      "CorrectAnswer": "try"
-    },
-    {
-      "QuestionID": 8,
-      "Question": "Which keyword is used to call a base class constructor?",
-      "Answers": [
-        "base",
-        "this",
-        "super",
-        "new"
-      ],
-      "CorrectAnswer": "base"
-    },
-    {
-      "QuestionID": 9,
-      "Question": "Which keyword prevents a class from being inherited?",
-      "Answers": [
-        "sealed",
-        "static",
-        "abstract",
-        "readonly"
-      ],
-      "CorrectAnswer": "sealed"
-    },
-    {
-      "QuestionID": 10,
-      "Question": "Which operator is used to check for equality?",
-      "Answers": [
-        "==",
-        "=",
-        "===",
-        "!="
-      ],
-      "CorrectAnswer": "=="
-    },
-    {
-      "QuestionID": 11,
-      "Question": "Which method converts a string to an integer?",
-      "Answers": [
-        "int.Parse",
-        "Convert.ToInt32",
-        "ToInt",
-        "parseInt"
-      ],
-      "CorrectAnswer": "int.Parse"
-    },
-    {
-      "QuestionID": 12,
-      "Question": "What is the output of Console.WriteLine(\"2\" + 2); ?",
-      "Answers": [
-        "22",
-        "4",
-        "Error",
-        "2"
-      ],
-      "CorrectAnswer": "22"
-    },
-    {
-      "QuestionID": 13,
-      "Question": "Which keyword is used to declare a constant?",
-      "Answers": [
-        "const",
-        "readonly",
-        "static",
-        "final"
-      ],
-      "CorrectAnswer": "const"
-    },
-    {
-      "QuestionID": 14,
-      "Question": "Which keyword indicates that a member belongs to the type rather than an instance?",
-      "Answers": [
-        "static",
-        "const",
-        "readonly",
-        "sealed"
-      ],
-      "CorrectAnswer": "static"
-    },
-    {
-      "QuestionID": 15,
-      "Question": "What is the output of Console.WriteLine(10 % 3); ?",
-      "Answers": [
-        "1",
-        "3",
-        "0",
-        "2"
-      ],
-      "CorrectAnswer": "1"
-    },
-    {
-      "QuestionID": 16,
-      "Question": "Which keyword is used to override a base class method?",
-      "Answers": [
-        "override",
-        "virtual",
-        "new",
-        "abstract"
-      ],
-      "CorrectAnswer": "override"
-    },
-    {
-      "QuestionID": 17,
-      "Question": "Which keyword is used to declare an interface?",
-      "Answers": [
-        "interface",
-        "class",
-        "struct",
-        "delegate"
-      ],
-      "CorrectAnswer": "interface"
-    },
-    {
-      "QuestionID": 18,
-      "Question": "What is the output of Console.WriteLine(\"Hello\".Length); ?",
-      "Answers": [
-        "5",
-        "6",
-        "Error",
-        "0"
-      ],
-      "CorrectAnswer": "5"
-    },
-    {
-      "QuestionID": 19,
-      "Question": "Which operator is used for logical AND?",
-      "Answers": [
-        "&&",
-        "&",
-        "||",
-        "and"
-      ],
-      "CorrectAnswer": "&&"
-    },
-    {
-      "QuestionID": 20,
-      "Question": "Which operator is used for logical OR?",
-      "Answers": [
-        "||",
-        "|",
-        "&&",
-        "or"
-      ],
-      "CorrectAnswer": "||"
-    },
-    {
-      "QuestionID": 21,
-      "Question": "What does the method ToString do?",
-      "Answers": [
-        "Converts an object to its string representation",
-        "Parses a string to an object",
-        "Formats a date",
-        "Returns the type of an object"
-      ],
-      "CorrectAnswer": "Converts an object to its string representation"
-    },
-    {
-      "QuestionID": 22,
-      "Question": "Which keyword is used to declare a delegate type?",
-      "Answers": [
-        "delegate",
-        "event",
-        "func",
-        "action"
-      ],
-      "CorrectAnswer": "delegate"
-    },
-    {
-      "QuestionID": 23,
-      "Question": "Which keyword is used to declare an event?",
-      "Answers": [
-        "event",
-        "delegate",
-        "trigger",
-        "raise"
-      ],
-      "CorrectAnswer": "event"
-    },
-    {
-      "QuestionID": 24,
-      "Question": "What is the output of Console.WriteLine(3 > 2); ?",
-      "Answers": [
-        "True",
-        "False",
-        "Error",
-        "3"
-      ],
-      "CorrectAnswer": "True"
-    },
-    {
-      "QuestionID": 25,
-      "Question": "Which method is used to compare two strings for equality in a case-sensitive manner?",
-      "Answers": [
-        "Equals",
-        "CompareTo",
-        "==",
-        "Both Equals and =="
-      ],
-      "CorrectAnswer": "Both Equals and =="
-    },
-    {
-      "QuestionID": 26,
-      "Question": "Which method converts a string to all uppercase letters?",
-      "Answers": [
-        "ToUpper",
-        "ToLower",
-        "Uppercase",
-        "Convert.ToUpper"
-      ],
-      "CorrectAnswer": "ToUpper"
-    },
-    {
-      "QuestionID": 27,
-      "Question": "What is the output of Console.WriteLine(5 / 2); ?",
-      "Answers": [
-        "2",
-        "2.5",
-        "3",
-        "Error"
-      ],
-      "CorrectAnswer": "2"
-    },
-    {
-      "QuestionID": 28,
-      "Question": "Which symbol is appended to a value type to make it nullable?",
-      "Answers": [
-        "?",
-        "!",
-        "*",
-        "&"
-      ],
-      "CorrectAnswer": "?"
-    },
-    {
-      "QuestionID": 29,
-      "Question": "What is the output of Console.WriteLine(10 / 3.0); ?",
-      "Answers": [
-        "3.3333333333333335",
-        "3",
-        "3.0",
-        "Error"
-      ],
-      "CorrectAnswer": "3.3333333333333335"
-    }
-  ]
+    //NONE OF THESE QUESTIONS ARE MINE AND WHERE ALL GENERATED BY CHAT GPT
+    "State": [
+        {
+            "QuestionID": 0,
+            "Question": "The method ______ is used to write output to the console.",
+            "Hint": "It starts with 'Console.'",
+            "CorrectAnswer": "Console.WriteLine"
+        },
+        {
+            "QuestionID": 1,
+            "Question": "The keyword ______ is used to declare a class.",
+            "Hint": "It starts with 'c'.",
+            "CorrectAnswer": "class"
+        },
+        {
+            "QuestionID": 2,
+            "Question": "The keyword ______ is used to declare a function that does not return any value.",
+            "Hint": "It means 'nothing'.",
+            "CorrectAnswer": "void"
+        },
+        {
+            "QuestionID": 3,
+            "Question": "The keyword ______ is used to create a new instance of an object.",
+            "Hint": "It instantiates an object.",
+            "CorrectAnswer": "new"
+        },
+        {
+            "QuestionID": 4,
+            "Question": "The property ______ returns the number of elements in an array.",
+            "Hint": "It is capitalized.",
+            "CorrectAnswer": "Length"
+        },
+        {
+            "QuestionID": 5,
+            "Question": "The keyword ______ is used to declare an interface.",
+            "Hint": "It's a reserved word for interfaces.",
+            "CorrectAnswer": "interface"
+        },
+        {
+            "QuestionID": 6,
+            "Question": "In a class declaration, inheritance is denoted by the symbol ______.",
+            "Hint": "It is a punctuation mark.",
+            "CorrectAnswer": ":"
+        },
+        {
+            "QuestionID": 7,
+            "Question": "The keyword ______ is used to override a base class method.",
+            "Hint": "It allows a method to be replaced in a derived class.",
+            "CorrectAnswer": "override"
+        },
+        {
+            "QuestionID": 8,
+            "Question": "The keyword ______ marks a method as one that can be overridden in derived classes.",
+            "Hint": "It suggests that the method's behavior is virtual.",
+            "CorrectAnswer": "virtual"
+        },
+        {
+            "QuestionID": 9,
+            "Question": "The block starting with ______ is used to attempt code that might throw an exception.",
+            "Hint": "It begins an exception handling structure.",
+            "CorrectAnswer": "try"
+        },
+        {
+            "QuestionID": 10,
+            "Question": "The block starting with ______ is used to catch exceptions.",
+            "Hint": "It follows a try block.",
+            "CorrectAnswer": "catch"
+        },
+        {
+            "QuestionID": 11,
+            "Question": "The block starting with ______ is used to perform cleanup after exception handling.",
+            "Hint": "It always executes after try/catch.",
+            "CorrectAnswer": "finally"
+        },
+        {
+            "QuestionID": 12,
+            "Question": "The keyword ______ is used to declare a constant field.",
+            "Hint": "It signifies an unchangeable value.",
+            "CorrectAnswer": "const"
+        },
+        {
+            "QuestionID": 13,
+            "Question": "The keyword ______ is used to declare a read-only field that can only be assigned during declaration or in a constructor.",
+            "Hint": "It ensures the value cannot change after initialization.",
+            "CorrectAnswer": "readonly"
+        },
+        {
+            "QuestionID": 14,
+            "Question": "The method ______ returns the runtime type of an object.",
+            "Hint": "It is inherited from System.Object.",
+            "CorrectAnswer": "GetType"
+        },
+        {
+            "QuestionID": 15,
+            "Question": "The keyword ______ is used to declare a static member.",
+            "Hint": "It indicates that the member belongs to the type rather than an instance.",
+            "CorrectAnswer": "static"
+        },
+        {
+            "QuestionID": 16,
+            "Question": "The keyword ______ allows a class definition to be split across multiple files.",
+            "Hint": "It is used when a class is divided into parts.",
+            "CorrectAnswer": "partial"
+        },
+        {
+            "QuestionID": 17,
+            "Question": "The operator ______ is used to concatenate strings.",
+            "Hint": "It is also used for addition.",
+            "CorrectAnswer": "+"
+        },
+        {
+            "QuestionID": 18,
+            "Question": "The method ______ converts a string to an integer.",
+            "Hint": "It is a static method on the int type.",
+            "CorrectAnswer": "int.Parse"
+        },
+        {
+            "QuestionID": 19,
+            "Question": "The keyword ______ is used to declare a namespace.",
+            "Hint": "It organizes classes and other types.",
+            "CorrectAnswer": "namespace"
+        },
+        {
+            "QuestionID": 20,
+            "Question": "The directive ______ is used to include a namespace in a file.",
+            "Hint": "It appears at the top of the file.",
+            "CorrectAnswer": "using"
+        },
+        {
+            "QuestionID": 21,
+            "Question": "The operator ______ returns the remainder of a division operation.",
+            "Hint": "It is represented by a percent sign.",
+            "CorrectAnswer": "%"
+        },
+        {
+            "QuestionID": 22,
+            "Question": "The keyword ______ is used to define a structure.",
+            "Hint": "It is similar to a class but a value type.",
+            "CorrectAnswer": "struct"
+        },
+        {
+            "QuestionID": 23,
+            "Question": "The method ______ compares two strings for equality in a case-sensitive manner.",
+            "Hint": "It is often used for string comparisons.",
+            "CorrectAnswer": "Equals"
+        },
+        {
+            "QuestionID": 24,
+            "Question": "The operator ______ checks for equality between two values.",
+            "Hint": "It is used to compare numbers and objects.",
+            "CorrectAnswer": "=="
+        },
+        {
+            "QuestionID": 25,
+            "Question": "The keyword ______ allows a derived class to call a member of its base class.",
+            "Hint": "It refers to the base class.",
+            "CorrectAnswer": "base"
+        },
+        {
+            "QuestionID": 26,
+            "Question": "The keyword ______ is used to declare a delegate type.",
+            "Hint": "It specifies a reference to a method.",
+            "CorrectAnswer": "delegate"
+        },
+        {
+            "QuestionID": 27,
+            "Question": "The keyword ______ is used to declare an event within a class.",
+            "Hint": "It is paired with delegate types.",
+            "CorrectAnswer": "event"
+        },
+        {
+            "QuestionID": 28,
+            "Question": "The keyword ______ prevents a class from being inherited.",
+            "Hint": "It seals the class.",
+            "CorrectAnswer": "sealed"
+        },
+        {
+            "QuestionID": 29,
+            "Question": "The method ______ converts an object to its string representation.",
+            "Hint": "It is inherited from System.Object.",
+            "CorrectAnswer": "ToString"
+        }
+    ],
+    "Multi": [
+        {
+            "QuestionID": 0,
+            "Question": "Which keyword is used to define a class?",
+            "Answers": [
+                "class",
+                "struct",
+                "interface",
+                "object"
+            ],
+            "CorrectAnswer": "class"
+        },
+        {
+            "QuestionID": 1,
+            "Question": "Which keyword is used to create an instance of an object?",
+            "Answers": [
+                "new",
+                "create",
+                "instance",
+                "init"
+            ],
+            "CorrectAnswer": "new"
+        },
+        {
+            "QuestionID": 2,
+            "Question": "Which access modifier restricts access to the containing class only?",
+            "Answers": [
+                "private",
+                "public",
+                "protected",
+                "internal"
+            ],
+            "CorrectAnswer": "private"
+        },
+        {
+            "QuestionID": 3,
+            "Question": "What is the output of Console.WriteLine(5 + 3 * 2); ?",
+            "Answers": [
+                "11",
+                "16",
+                "13",
+                "10"
+            ],
+            "CorrectAnswer": "11"
+        },
+        {
+            "QuestionID": 4,
+            "Question": "Which property returns the number of elements in an array?",
+            "Answers": [
+                "Length",
+                "Count",
+                "size",
+                "Length"
+            ],
+            "CorrectAnswer": "Length"
+        },
+        {
+            "QuestionID": 5,
+            "Question": "Which symbol is used for inheritance in a class declaration?",
+            "Answers": [
+                ":",
+                "extends",
+                "inherits",
+                "implements"
+            ],
+            "CorrectAnswer": ":"
+        },
+        {
+            "QuestionID": 6,
+            "Question": "What is the default value of a boolean variable?",
+            "Answers": [
+                "false",
+                "true",
+                "null",
+                "0"
+            ],
+            "CorrectAnswer": "false"
+        },
+        {
+            "QuestionID": 7,
+            "Question": "Which keyword is used to begin an exception handling block?",
+            "Answers": [
+                "try",
+                "catch",
+                "throw",
+                "error"
+            ],
+            "CorrectAnswer": "try"
+        },
+        {
+            "QuestionID": 8,
+            "Question": "Which keyword is used to call a base class constructor?",
+            "Answers": [
+                "base",
+                "this",
+                "super",
+                "new"
+            ],
+            "CorrectAnswer": "base"
+        },
+        {
+            "QuestionID": 9,
+            "Question": "Which keyword prevents a class from being inherited?",
+            "Answers": [
+                "sealed",
+                "static",
+                "abstract",
+                "readonly"
+            ],
+            "CorrectAnswer": "sealed"
+        },
+        {
+            "QuestionID": 10,
+            "Question": "Which operator is used to check for equality?",
+            "Answers": [
+                "==",
+                "=",
+                "===",
+                "!="
+            ],
+            "CorrectAnswer": "=="
+        },
+        {
+            "QuestionID": 11,
+            "Question": "Which method converts a string to an integer?",
+            "Answers": [
+                "int.Parse",
+                "Convert.ToInt32",
+                "ToInt",
+                "parseInt"
+            ],
+            "CorrectAnswer": "int.Parse"
+        },
+        {
+            "QuestionID": 12,
+            "Question": "What is the output of Console.WriteLine(\"2\" + 2); ?",
+            "Answers": [
+                "22",
+                "4",
+                "Error",
+                "2"
+            ],
+            "CorrectAnswer": "22"
+        },
+        {
+            "QuestionID": 13,
+            "Question": "Which keyword is used to declare a constant?",
+            "Answers": [
+                "const",
+                "readonly",
+                "static",
+                "final"
+            ],
+            "CorrectAnswer": "const"
+        },
+        {
+            "QuestionID": 14,
+            "Question": "Which keyword indicates that a member belongs to the type rather than an instance?",
+            "Answers": [
+                "static",
+                "const",
+                "readonly",
+                "sealed"
+            ],
+            "CorrectAnswer": "static"
+        },
+        {
+            "QuestionID": 15,
+            "Question": "What is the output of Console.WriteLine(10 % 3); ?",
+            "Answers": [
+                "1",
+                "3",
+                "0",
+                "2"
+            ],
+            "CorrectAnswer": "1"
+        },
+        {
+            "QuestionID": 16,
+            "Question": "Which keyword is used to override a base class method?",
+            "Answers": [
+                "override",
+                "virtual",
+                "new",
+                "abstract"
+            ],
+            "CorrectAnswer": "override"
+        },
+        {
+            "QuestionID": 17,
+            "Question": "Which keyword is used to declare an interface?",
+            "Answers": [
+                "interface",
+                "class",
+                "struct",
+                "delegate"
+            ],
+            "CorrectAnswer": "interface"
+        },
+        {
+            "QuestionID": 18,
+            "Question": "What is the output of Console.WriteLine(\"Hello\".Length); ?",
+            "Answers": [
+                "5",
+                "6",
+                "Error",
+                "0"
+            ],
+            "CorrectAnswer": "5"
+        },
+        {
+            "QuestionID": 19,
+            "Question": "Which operator is used for logical AND?",
+            "Answers": [
+                "&&",
+                "&",
+                "||",
+                "and"
+            ],
+            "CorrectAnswer": "&&"
+        },
+        {
+            "QuestionID": 20,
+            "Question": "Which operator is used for logical OR?",
+            "Answers": [
+                "||",
+                "|",
+                "&&",
+                "or"
+            ],
+            "CorrectAnswer": "||"
+        },
+        {
+            "QuestionID": 21,
+            "Question": "What does the method ToString do?",
+            "Answers": [
+                "Converts an object to its string representation",
+                "Parses a string to an object",
+                "Formats a date",
+                "Returns the type of an object"
+            ],
+            "CorrectAnswer": "Converts an object to its string representation"
+        },
+        {
+            "QuestionID": 22,
+            "Question": "Which keyword is used to declare a delegate type?",
+            "Answers": [
+                "delegate",
+                "event",
+                "func",
+                "action"
+            ],
+            "CorrectAnswer": "delegate"
+        },
+        {
+            "QuestionID": 23,
+            "Question": "Which keyword is used to declare an event?",
+            "Answers": [
+                "event",
+                "delegate",
+                "trigger",
+                "raise"
+            ],
+            "CorrectAnswer": "event"
+        },
+        {
+            "QuestionID": 24,
+            "Question": "What is the output of Console.WriteLine(3 > 2); ?",
+            "Answers": [
+                "True",
+                "False",
+                "Error",
+                "3"
+            ],
+            "CorrectAnswer": "True"
+        },
+        {
+            "QuestionID": 25,
+            "Question": "Which method is used to compare two strings for equality in a case-sensitive manner?",
+            "Answers": [
+                "Equals",
+                "CompareTo",
+                "==",
+                "Both Equals and =="
+            ],
+            "CorrectAnswer": "Both Equals and =="
+        },
+        {
+            "QuestionID": 26,
+            "Question": "Which method converts a string to all uppercase letters?",
+            "Answers": [
+                "ToUpper",
+                "ToLower",
+                "Uppercase",
+                "Convert.ToUpper"
+            ],
+            "CorrectAnswer": "ToUpper"
+        },
+        {
+            "QuestionID": 27,
+            "Question": "What is the output of Console.WriteLine(5 / 2); ?",
+            "Answers": [
+                "2",
+                "2.5",
+                "3",
+                "Error"
+            ],
+            "CorrectAnswer": "2"
+        },
+        {
+            "QuestionID": 28,
+            "Question": "Which symbol is appended to a value type to make it nullable?",
+            "Answers": [
+                "?",
+                "!",
+                "*",
+                "&"
+            ],
+            "CorrectAnswer": "?"
+        },
+        {
+            "QuestionID": 29,
+            "Question": "What is the output of Console.WriteLine(10 / 3.0); ?",
+            "Answers": [
+                "3.3333333333333335",
+                "3",
+                "3.0",
+                "Error"
+            ],
+            "CorrectAnswer": "3.3333333333333335"
+        }
+    ]
 }

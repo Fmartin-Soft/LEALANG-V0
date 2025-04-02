@@ -1,514 +1,517 @@
 {
-    "Multi":[ {
-        "QuestionID": 0,
-        "Question": "What is the file extension for JavaScript files?",
-        "Answers": [
-            ".js",
-            ".jsx",
-            ".java",
-            ".ts"
-        ],
-        "CorrectAnswer": ".js"
-    },
-    {
-        "QuestionID": 1,
-        "Question": "Which keyword declares a block-scoped variable?",
-        "Answers": [
-            "var",
-            "let",
-            "const",
-            "define"
-        ],
-        "CorrectAnswer": "let"
-    },
-    {
-        "QuestionID": 2,
-        "Question": "Which method converts a JSON string into an object?",
-        "Answers": [
-            "JSON.stringify",
-            "JSON.parse",
-            "parseJSON",
-            "toObject"
-        ],
-        "CorrectAnswer": "JSON.parse"
-    },
-    {
-        "QuestionID": 3,
-        "Question": "What is the output of console.log(2 + '2')?",
-        "Answers": [
-            "22",
-            "4",
-            "Error",
-            "NaN"
-        ],
-        "CorrectAnswer": "22"
-    },
-    {
-        "QuestionID": 4,
-        "Question": "Which operator compares both value and type?",
-        "Answers": [
-            "==",
-            "===",
-            "=",
-            "!=="
-        ],
-        "CorrectAnswer": "==="
-    },
-    {
-        "QuestionID": 5,
-        "Question": "What is the result of typeof null?",
-        "Answers": [
-            "null",
-            "object",
-            "undefined",
-            "number"
-        ],
-        "CorrectAnswer": "object"
-    },
-    {
-        "QuestionID": 6,
-        "Question": "Which method adds an element to the end of an array?",
-        "Answers": [
-            "push",
-            "pop",
-            "shift",
-            "unshift"
-        ],
-        "CorrectAnswer": "push"
-    },
-    {
-        "QuestionID": 7,
-        "Question": "What is the output of console.log(true && false)?",
-        "Answers": [
-            "true",
-            "false",
-            "Error",
-            "undefined"
-        ],
-        "CorrectAnswer": "false"
-    },
-    {
-        "QuestionID": 8,
-        "Question": "Which symbol is used for single-line comments?",
-        "Answers": [
-            "//",
-            "/*",
-            "#",
-            "<!--"
-        ],
-        "CorrectAnswer": "//"
-    },
-    {
-        "QuestionID": 9,
-        "Question": "What does the '===' operator check for?",
-        "Answers": [
-            "Value only",
-            "Type only",
-            "Both value and type",
-            "None"
-        ],
-        "CorrectAnswer": "Both value and type"
-    },
-    {
-        "QuestionID": 10,
-        "Question": "Which keyword is used to declare a function expression?",
-        "Answers": [
-            "function",
-            "def",
-            "fn",
-            "expr"
-        ],
-        "CorrectAnswer": "function"
-    },
-    {
-        "QuestionID": 11,
-        "Question": "Which method returns the length of a string?",
-        "Answers": [
-            "size()",
-            "length",
-            "count",
-            "len"
-        ],
-        "CorrectAnswer": "length"
-    },
-    {
-        "QuestionID": 12,
-        "Question": "Which method returns a new array with all elements that pass a test?",
-        "Answers": [
-            "filter",
-            "map",
-            "reduce",
-            "forEach"
-        ],
-        "CorrectAnswer": "filter"
-    },
-    {
-        "QuestionID": 13,
-        "Question": "What is the output of console.log('5' - 2)?",
-        "Answers": [
-            "3",
-            "\"52\"",
-            "NaN",
-            "Error"
-        ],
-        "CorrectAnswer": "3"
-    },
-    {
-        "QuestionID": 14,
-        "Question": "Which method returns the index of the first occurrence of a value?",
-        "Answers": [
-            "indexOf",
-            "findIndex",
-            "search",
-            "locate"
-        ],
-        "CorrectAnswer": "indexOf"
-    },
-    {
-        "QuestionID": 15,
-        "Question": "What is the output of console.log(0.1 + 0.2 === 0.3)?",
-        "Answers": [
-            "true",
-            "false",
-            "0.3",
-            "undefined"
-        ],
-        "CorrectAnswer": "false"
-    },
-    {
-        "QuestionID": 16,
-        "Question": "Which keyword is used to handle exceptions?",
-        "Answers": [
-            "catch",
-            "handle",
-            "try",
-            "error"
-        ],
-        "CorrectAnswer": "try"
-    },
-    {
-        "QuestionID": 17,
-        "Question": "Which operator is used for modulus?",
-        "Answers": [
-            "%",
-            "//",
-            "mod",
-            "%%"
-        ],
-        "CorrectAnswer": "%"
-    },
-    {
-        "QuestionID": 18,
-        "Question": "Which method converts an array to a string?",
-        "Answers": [
-            "toString",
-            "join",
-            "concat",
-            "split"
-        ],
-        "CorrectAnswer": "join"
-    },
-    {
-        "QuestionID": 19,
-        "Question": "What is the output of console.log('abc'.toUpperCase())?",
-        "Answers": [
-            "abc",
-            "ABC",
-            "Abc",
-            "error"
-        ],
-        "CorrectAnswer": "ABC"
-    },
-    {
-        "QuestionID": 20,
-        "Question": "Which operator is used for exponentiation in JavaScript?",
-        "Answers": [
-            "^",
-            "**",
-            "exp",
-            "pow"
-        ],
-        "CorrectAnswer": "**"
-    },
-    {
-        "QuestionID": 21,
-        "Question": "What is the output of console.log(typeof []);",
-        "Answers": [
-            "array",
-            "object",
-            "list",
-            "undefined"
-        ],
-        "CorrectAnswer": "object"
-    },
-    {
-        "QuestionID": 22,
-        "Question": "Which method returns a new array with the results of calling a function on every element?",
-        "Answers": [
-            "map",
-            "filter",
-            "reduce",
-            "forEach"
-        ],
-        "CorrectAnswer": "map"
-    },
-    {
-        "QuestionID": 23,
-        "Question": "What does JSON.stringify() do?",
-        "Answers": [
-            "Converts an object to a JSON string",
-            "Parses a JSON string to an object",
-            "Formats a date",
-            "None"
-        ],
-        "CorrectAnswer": "Converts an object to a JSON string"
-    },
-    {
-        "QuestionID": 24,
-        "Question": "Which keyword is used to declare a variable in ES6?",
-        "Answers": [
-            "var",
-            "let",
-            "const",
-            "both let and const"
-        ],
-        "CorrectAnswer": "both let and const"
-    },
-    {
-        "QuestionID": 25,
-        "Question": "What is the output of console.log(10 / 2)?",
-        "Answers": [
-            "5",
-            "10",
-            "2",
-            "Error"
-        ],
-        "CorrectAnswer": "5"
-    },
-    {
-        "QuestionID": 26,
-        "Question": "Which method is used to remove the last element from an array?",
-        "Answers": [
-            "pop",
-            "push",
-            "shift",
-            "slice"
-        ],
-        "CorrectAnswer": "pop"
-    },
-    {
-        "QuestionID": 27,
-        "Question": "What is the output of console.log(3 > 2)?",
-        "Answers": [
-            "true",
-            "false",
-            "Error",
-            "NaN"
-        ],
-        "CorrectAnswer": "true"
-    },
-    {
-        "QuestionID": 28,
-        "Question": "Which operator is used to concatenate strings?",
-        "Answers": [
-            "+",
-            "&",
-            "concat",
-            "join"
-        ],
-        "CorrectAnswer": "+"
-    },
-    {
-        "QuestionID": 29,
-        "Question": "What does the 'typeof' operator return for a function?",
-        "Answers": [
-            "function",
-            "object",
-            "undefined",
-            "string"
-        ],
-        "CorrectAnswer": "function"
-    }
+    //NONE OF THESE QUESTIONS ARE MINE AND WHERE ALL GENERATED BY CHAT GPT
+    "Multi": [
+        {
+            "QuestionID": 0,
+            "Question": "What is the file extension for JavaScript files?",
+            "Answers": [
+                ".js",
+                ".jsx",
+                ".java",
+                ".ts"
+            ],
+            "CorrectAnswer": ".js"
+        },
+        {
+            "QuestionID": 1,
+            "Question": "Which keyword declares a block-scoped variable?",
+            "Answers": [
+                "var",
+                "let",
+                "const",
+                "define"
+            ],
+            "CorrectAnswer": "let"
+        },
+        {
+            "QuestionID": 2,
+            "Question": "Which method converts a JSON string into an object?",
+            "Answers": [
+                "JSON.stringify",
+                "JSON.parse",
+                "parseJSON",
+                "toObject"
+            ],
+            "CorrectAnswer": "JSON.parse"
+        },
+        {
+            "QuestionID": 3,
+            "Question": "What is the output of console.log(2 + '2')?",
+            "Answers": [
+                "22",
+                "4",
+                "Error",
+                "NaN"
+            ],
+            "CorrectAnswer": "22"
+        },
+        {
+            "QuestionID": 4,
+            "Question": "Which operator compares both value and type?",
+            "Answers": [
+                "==",
+                "===",
+                "=",
+                "!=="
+            ],
+            "CorrectAnswer": "==="
+        },
+        {
+            "QuestionID": 5,
+            "Question": "What is the result of typeof null?",
+            "Answers": [
+                "null",
+                "object",
+                "undefined",
+                "number"
+            ],
+            "CorrectAnswer": "object"
+        },
+        {
+            "QuestionID": 6,
+            "Question": "Which method adds an element to the end of an array?",
+            "Answers": [
+                "push",
+                "pop",
+                "shift",
+                "unshift"
+            ],
+            "CorrectAnswer": "push"
+        },
+        {
+            "QuestionID": 7,
+            "Question": "What is the output of console.log(true && false)?",
+            "Answers": [
+                "true",
+                "false",
+                "Error",
+                "undefined"
+            ],
+            "CorrectAnswer": "false"
+        },
+        {
+            "QuestionID": 8,
+            "Question": "Which symbol is used for single-line comments?",
+            "Answers": [
+                "//",
+                "/*",
+                "#",
+                "<!--"
+            ],
+            "CorrectAnswer": "//"
+        },
+        {
+            "QuestionID": 9,
+            "Question": "What does the '===' operator check for?",
+            "Answers": [
+                "Value only",
+                "Type only",
+                "Both value and type",
+                "None"
+            ],
+            "CorrectAnswer": "Both value and type"
+        },
+        {
+            "QuestionID": 10,
+            "Question": "Which keyword is used to declare a function expression?",
+            "Answers": [
+                "function",
+                "def",
+                "fn",
+                "expr"
+            ],
+            "CorrectAnswer": "function"
+        },
+        {
+            "QuestionID": 11,
+            "Question": "Which method returns the length of a string?",
+            "Answers": [
+                "size()",
+                "length",
+                "count",
+                "len"
+            ],
+            "CorrectAnswer": "length"
+        },
+        {
+            "QuestionID": 12,
+            "Question": "Which method returns a new array with all elements that pass a test?",
+            "Answers": [
+                "filter",
+                "map",
+                "reduce",
+                "forEach"
+            ],
+            "CorrectAnswer": "filter"
+        },
+        {
+            "QuestionID": 13,
+            "Question": "What is the output of console.log('5' - 2)?",
+            "Answers": [
+                "3",
+                "\"52\"",
+                "NaN",
+                "Error"
+            ],
+            "CorrectAnswer": "3"
+        },
+        {
+            "QuestionID": 14,
+            "Question": "Which method returns the index of the first occurrence of a value?",
+            "Answers": [
+                "indexOf",
+                "findIndex",
+                "search",
+                "locate"
+            ],
+            "CorrectAnswer": "indexOf"
+        },
+        {
+            "QuestionID": 15,
+            "Question": "What is the output of console.log(0.1 + 0.2 === 0.3)?",
+            "Answers": [
+                "true",
+                "false",
+                "0.3",
+                "undefined"
+            ],
+            "CorrectAnswer": "false"
+        },
+        {
+            "QuestionID": 16,
+            "Question": "Which keyword is used to handle exceptions?",
+            "Answers": [
+                "catch",
+                "handle",
+                "try",
+                "error"
+            ],
+            "CorrectAnswer": "try"
+        },
+        {
+            "QuestionID": 17,
+            "Question": "Which operator is used for modulus?",
+            "Answers": [
+                "%",
+                "//",
+                "mod",
+                "%%"
+            ],
+            "CorrectAnswer": "%"
+        },
+        {
+            "QuestionID": 18,
+            "Question": "Which method converts an array to a string?",
+            "Answers": [
+                "toString",
+                "join",
+                "concat",
+                "split"
+            ],
+            "CorrectAnswer": "join"
+        },
+        {
+            "QuestionID": 19,
+            "Question": "What is the output of console.log('abc'.toUpperCase())?",
+            "Answers": [
+                "abc",
+                "ABC",
+                "Abc",
+                "error"
+            ],
+            "CorrectAnswer": "ABC"
+        },
+        {
+            "QuestionID": 20,
+            "Question": "Which operator is used for exponentiation in JavaScript?",
+            "Answers": [
+                "^",
+                "**",
+                "exp",
+                "pow"
+            ],
+            "CorrectAnswer": "**"
+        },
+        {
+            "QuestionID": 21,
+            "Question": "What is the output of console.log(typeof []);",
+            "Answers": [
+                "array",
+                "object",
+                "list",
+                "undefined"
+            ],
+            "CorrectAnswer": "object"
+        },
+        {
+            "QuestionID": 22,
+            "Question": "Which method returns a new array with the results of calling a function on every element?",
+            "Answers": [
+                "map",
+                "filter",
+                "reduce",
+                "forEach"
+            ],
+            "CorrectAnswer": "map"
+        },
+        {
+            "QuestionID": 23,
+            "Question": "What does JSON.stringify() do?",
+            "Answers": [
+                "Converts an object to a JSON string",
+                "Parses a JSON string to an object",
+                "Formats a date",
+                "None"
+            ],
+            "CorrectAnswer": "Converts an object to a JSON string"
+        },
+        {
+            "QuestionID": 24,
+            "Question": "Which keyword is used to declare a variable in ES6?",
+            "Answers": [
+                "var",
+                "let",
+                "const",
+                "both let and const"
+            ],
+            "CorrectAnswer": "both let and const"
+        },
+        {
+            "QuestionID": 25,
+            "Question": "What is the output of console.log(10 / 2)?",
+            "Answers": [
+                "5",
+                "10",
+                "2",
+                "Error"
+            ],
+            "CorrectAnswer": "5"
+        },
+        {
+            "QuestionID": 26,
+            "Question": "Which method is used to remove the last element from an array?",
+            "Answers": [
+                "pop",
+                "push",
+                "shift",
+                "slice"
+            ],
+            "CorrectAnswer": "pop"
+        },
+        {
+            "QuestionID": 27,
+            "Question": "What is the output of console.log(3 > 2)?",
+            "Answers": [
+                "true",
+                "false",
+                "Error",
+                "NaN"
+            ],
+            "CorrectAnswer": "true"
+        },
+        {
+            "QuestionID": 28,
+            "Question": "Which operator is used to concatenate strings?",
+            "Answers": [
+                "+",
+                "&",
+                "concat",
+                "join"
+            ],
+            "CorrectAnswer": "+"
+        },
+        {
+            "QuestionID": 29,
+            "Question": "What does the 'typeof' operator return for a function?",
+            "Answers": [
+                "function",
+                "object",
+                "undefined",
+                "string"
+            ],
+            "CorrectAnswer": "function"
+        }
     ],
-    "State":[ {
-        "QuestionID": 0,
-        "Question": "What is the output of console.log(2 + 2); ?",
-        "Hint": "It performs a basic addition.",
-        "CorrectAnswer": "4"
-    },
-    {
-        "QuestionID": 1,
-        "Question": "The keyword _____ is used to declare a block-scoped variable.",
-        "Hint": "It was introduced in ES6.",
-        "CorrectAnswer": "let"
-    },
-    {
-        "QuestionID": 2,
-        "Question": "The keyword _____ declares a constant variable.",
-        "Hint": "It creates an unchangeable binding.",
-        "CorrectAnswer": "const"
-    },
-    {
-        "QuestionID": 3,
-        "Question": "What is the output of console.log('Hello'.toUpperCase()); ?",
-        "Hint": "It converts all letters to uppercase.",
-        "CorrectAnswer": "HELLO"
-    },
-    {
-        "QuestionID": 4,
-        "Question": "The function _____ converts a string to a number.",
-        "Hint": "It is a built-in constructor function used for type conversion.",
-        "CorrectAnswer": "Number"
-    },
-    {
-        "QuestionID": 5,
-        "Question": "What is the output of console.log(typeof []); ?",
-        "Hint": "Arrays in JavaScript are a kind of object.",
-        "CorrectAnswer": "object"
-    },
-    {
-        "QuestionID": 6,
-        "Question": "The operator _____ compares both value and type.",
-        "Hint": "It is stricter than ==.",
-        "CorrectAnswer": "==="
-    },
-    {
-        "QuestionID": 7,
-        "Question": "What is the output of console.log([1,2,3].length); ?",
-        "Hint": "It returns the number of elements in the array.",
-        "CorrectAnswer": "3"
-    },
-    {
-        "QuestionID": 8,
-        "Question": "The method _____ adds an element to the end of an array.",
-        "Hint": "It mutates the original array.",
-        "CorrectAnswer": "push"
-    },
-    {
-        "QuestionID": 9,
-        "Question": "What is the output of console.log(0.1 + 0.2 === 0.3); ?",
-        "Hint": "Floating-point arithmetic in JavaScript can be imprecise.",
-        "CorrectAnswer": "false"
-    },
-    {
-        "QuestionID": 10,
-        "Question": "What is the output of console.log(typeof null); ?",
-        "Hint": "Even though null means 'no value', its type is a quirk.",
-        "CorrectAnswer": "object"
-    },
-    {
-        "QuestionID": 11,
-        "Question": "The function _____ converts an object to a JSON string.",
-        "Hint": "It is a static method on the JSON object.",
-        "CorrectAnswer": "JSON.stringify"
-    },
-    {
-        "QuestionID": 12,
-        "Question": "What is the output of console.log('5' - 2); ?",
-        "Hint": "Subtraction converts the string to a number.",
-        "CorrectAnswer": "3"
-    },
-    {
-        "QuestionID": 13,
-        "Question": "The method _____ returns the first index of a given element in an array.",
-        "Hint": "It helps locate an element.",
-        "CorrectAnswer": "indexOf"
-    },
-    {
-        "QuestionID": 14,
-        "Question": "What is the output of console.log('10' + 5); ?",
-        "Hint": "The + operator concatenates when one operand is a string.",
-        "CorrectAnswer": "105"
-    },
-    {
-        "QuestionID": 15,
-        "Question": "The symbol _____ is used for single-line comments.",
-        "Hint": "It consists of two forward slashes.",
-        "CorrectAnswer": "//"
-    },
-    {
-        "QuestionID": 16,
-        "Question": "What is the output of console.log(3 * '3'); ?",
-        "Hint": "Multiplication converts the string to a number.",
-        "CorrectAnswer": "9"
-    },
-    {
-        "QuestionID": 17,
-        "Question": "The method _____ removes the last element from an array.",
-        "Hint": "It both returns and removes the element.",
-        "CorrectAnswer": "pop"
-    },
-    {
-        "QuestionID": 18,
-        "Question": "What is the output of console.log(5 % 2); ?",
-        "Hint": "The modulus operator returns the remainder.",
-        "CorrectAnswer": "1"
-    },
-    {
-        "QuestionID": 19,
-        "Question": "The operator _____ checks for equality in value, ignoring type.",
-        "Hint": "It performs type coercion.",
-        "CorrectAnswer": "=="
-    },
-    {
-        "QuestionID": 20,
-        "Question": "What is the output of console.log(Boolean('')); ?",
-        "Hint": "An empty string is falsy.",
-        "CorrectAnswer": "false"
-    },
-    {
-        "QuestionID": 21,
-        "Question": "The function _____ parses a string and returns an integer.",
-        "Hint": "It is a built-in function for conversion.",
-        "CorrectAnswer": "parseInt"
-    },
-    {
-        "QuestionID": 22,
-        "Question": "What is the output of console.log(!!0); ?",
-        "Hint": "Double negation converts a value to a boolean.",
-        "CorrectAnswer": "false"
-    },
-    {
-        "QuestionID": 23,
-        "Question": "The method _____ returns a new array with all elements that pass a test.",
-        "Hint": "It filters the array.",
-        "CorrectAnswer": "filter"
-    },
-    {
-        "QuestionID": 24,
-        "Question": "What is the output of console.log(Math.floor(4.7)); ?",
-        "Hint": "It rounds down to the nearest integer.",
-        "CorrectAnswer": "4"
-    },
-    {
-        "QuestionID": 25,
-        "Question": "The method _____ returns the largest number among its arguments.",
-        "Hint": "It is a Math function.",
-        "CorrectAnswer": "Math.max"
-    },
-    {
-        "QuestionID": 26,
-        "Question": "What is the output of console.log('hello'.charAt(1)); ?",
-        "Hint": "Indexing in strings starts at 0.",
-        "CorrectAnswer": "e"
-    },
-    {
-        "QuestionID": 27,
-        "Question": "The function _____ converts a string into an array of characters.",
-        "Hint": "It splits the string using a delimiter.",
-        "CorrectAnswer": "split"
-    },
-    {
-        "QuestionID": 28,
-        "Question": "What is the output of console.log(2 ** 3); ?",
-        "Hint": "It raises 2 to the power of 3.",
-        "CorrectAnswer": "8"
-    },
-    {
-        "QuestionID": 29,
-        "Question": "The keyword _____ is used to declare a function expression.",
-        "Hint": "It precedes a function definition in an expression.",
-        "CorrectAnswer": "function"
-    }
+    "State": [
+        {
+            "QuestionID": 0,
+            "Question": "What is the output of console.log(2 + 2); ?",
+            "Hint": "It performs a basic addition.",
+            "CorrectAnswer": "4"
+        },
+        {
+            "QuestionID": 1,
+            "Question": "The keyword _____ is used to declare a block-scoped variable.",
+            "Hint": "It was introduced in ES6.",
+            "CorrectAnswer": "let"
+        },
+        {
+            "QuestionID": 2,
+            "Question": "The keyword _____ declares a constant variable.",
+            "Hint": "It creates an unchangeable binding.",
+            "CorrectAnswer": "const"
+        },
+        {
+            "QuestionID": 3,
+            "Question": "What is the output of console.log('Hello'.toUpperCase()); ?",
+            "Hint": "It converts all letters to uppercase.",
+            "CorrectAnswer": "HELLO"
+        },
+        {
+            "QuestionID": 4,
+            "Question": "The function _____ converts a string to a number.",
+            "Hint": "It is a built-in constructor function used for type conversion.",
+            "CorrectAnswer": "Number"
+        },
+        {
+            "QuestionID": 5,
+            "Question": "What is the output of console.log(typeof []); ?",
+            "Hint": "Arrays in JavaScript are a kind of object.",
+            "CorrectAnswer": "object"
+        },
+        {
+            "QuestionID": 6,
+            "Question": "The operator _____ compares both value and type.",
+            "Hint": "It is stricter than ==.",
+            "CorrectAnswer": "==="
+        },
+        {
+            "QuestionID": 7,
+            "Question": "What is the output of console.log([1,2,3].length); ?",
+            "Hint": "It returns the number of elements in the array.",
+            "CorrectAnswer": "3"
+        },
+        {
+            "QuestionID": 8,
+            "Question": "The method _____ adds an element to the end of an array.",
+            "Hint": "It mutates the original array.",
+            "CorrectAnswer": "push"
+        },
+        {
+            "QuestionID": 9,
+            "Question": "What is the output of console.log(0.1 + 0.2 === 0.3); ?",
+            "Hint": "Floating-point arithmetic in JavaScript can be imprecise.",
+            "CorrectAnswer": "false"
+        },
+        {
+            "QuestionID": 10,
+            "Question": "What is the output of console.log(typeof null); ?",
+            "Hint": "Even though null means 'no value', its type is a quirk.",
+            "CorrectAnswer": "object"
+        },
+        {
+            "QuestionID": 11,
+            "Question": "The function _____ converts an object to a JSON string.",
+            "Hint": "It is a static method on the JSON object.",
+            "CorrectAnswer": "JSON.stringify"
+        },
+        {
+            "QuestionID": 12,
+            "Question": "What is the output of console.log('5' - 2); ?",
+            "Hint": "Subtraction converts the string to a number.",
+            "CorrectAnswer": "3"
+        },
+        {
+            "QuestionID": 13,
+            "Question": "The method _____ returns the first index of a given element in an array.",
+            "Hint": "It helps locate an element.",
+            "CorrectAnswer": "indexOf"
+        },
+        {
+            "QuestionID": 14,
+            "Question": "What is the output of console.log('10' + 5); ?",
+            "Hint": "The + operator concatenates when one operand is a string.",
+            "CorrectAnswer": "105"
+        },
+        {
+            "QuestionID": 15,
+            "Question": "The symbol _____ is used for single-line comments.",
+            "Hint": "It consists of two forward slashes.",
+            "CorrectAnswer": "//"
+        },
+        {
+            "QuestionID": 16,
+            "Question": "What is the output of console.log(3 * '3'); ?",
+            "Hint": "Multiplication converts the string to a number.",
+            "CorrectAnswer": "9"
+        },
+        {
+            "QuestionID": 17,
+            "Question": "The method _____ removes the last element from an array.",
+            "Hint": "It both returns and removes the element.",
+            "CorrectAnswer": "pop"
+        },
+        {
+            "QuestionID": 18,
+            "Question": "What is the output of console.log(5 % 2); ?",
+            "Hint": "The modulus operator returns the remainder.",
+            "CorrectAnswer": "1"
+        },
+        {
+            "QuestionID": 19,
+            "Question": "The operator _____ checks for equality in value, ignoring type.",
+            "Hint": "It performs type coercion.",
+            "CorrectAnswer": "=="
+        },
+        {
+            "QuestionID": 20,
+            "Question": "What is the output of console.log(Boolean('')); ?",
+            "Hint": "An empty string is falsy.",
+            "CorrectAnswer": "false"
+        },
+        {
+            "QuestionID": 21,
+            "Question": "The function _____ parses a string and returns an integer.",
+            "Hint": "It is a built-in function for conversion.",
+            "CorrectAnswer": "parseInt"
+        },
+        {
+            "QuestionID": 22,
+            "Question": "What is the output of console.log(!!0); ?",
+            "Hint": "Double negation converts a value to a boolean.",
+            "CorrectAnswer": "false"
+        },
+        {
+            "QuestionID": 23,
+            "Question": "The method _____ returns a new array with all elements that pass a test.",
+            "Hint": "It filters the array.",
+            "CorrectAnswer": "filter"
+        },
+        {
+            "QuestionID": 24,
+            "Question": "What is the output of console.log(Math.floor(4.7)); ?",
+            "Hint": "It rounds down to the nearest integer.",
+            "CorrectAnswer": "4"
+        },
+        {
+            "QuestionID": 25,
+            "Question": "The method _____ returns the largest number among its arguments.",
+            "Hint": "It is a Math function.",
+            "CorrectAnswer": "Math.max"
+        },
+        {
+            "QuestionID": 26,
+            "Question": "What is the output of console.log('hello'.charAt(1)); ?",
+            "Hint": "Indexing in strings starts at 0.",
+            "CorrectAnswer": "e"
+        },
+        {
+            "QuestionID": 27,
+            "Question": "The function _____ converts a string into an array of characters.",
+            "Hint": "It splits the string using a delimiter.",
+            "CorrectAnswer": "split"
+        },
+        {
+            "QuestionID": 28,
+            "Question": "What is the output of console.log(2 ** 3); ?",
+            "Hint": "It raises 2 to the power of 3.",
+            "CorrectAnswer": "8"
+        },
+        {
+            "QuestionID": 29,
+            "Question": "The keyword _____ is used to declare a function expression.",
+            "Hint": "It precedes a function definition in an expression.",
+            "CorrectAnswer": "function"
+        }
     ]
 }

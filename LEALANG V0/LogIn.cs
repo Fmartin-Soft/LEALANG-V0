@@ -29,12 +29,15 @@ namespace LEALANG_V0
         DatabaseFunctions DBfuncs = new DatabaseFunctions();
 
         bool YN = false;
+        
+        //gets the users languageid
         private void UserLanguageID()
         {
             Query = "SELECT * FROM userlang WHERE UserID = @userid";
             ValLoc = "@userid";
             langID = Convert.ToInt32(DBfuncs.DBReadValint(Query, userID.ToString(), ValLoc,"LangID"));
         }
+        //sees what the language is based on language id
         private void LanguageChosen()
         {
             Query = "SELECT * FROM languages WHERE langID = @langid";
@@ -60,12 +63,13 @@ namespace LEALANG_V0
                 UserLanguageID(); // figure out the userlanguage id
                 LanguageChosen(); // figure out the chosen language
 
-                //bit to do with streaks
+                //checks if the user is in a valid range for updating their daily streak
                 int streak = DBfuncs.DBReadValint("SELECT * FROM userpoints WHERE UserID = @userid", userID.ToString(), "@userid", "Streak");
                 string log = DBfuncs.LastLoginCheck(userID.ToString());
-                if (log == "false")
+                
+                if (log == "false") //if theyre not
                 {
-                    DBfuncs.StreakChange(userID.ToString(), 0);
+                    DBfuncs.StreakChange(userID.ToString(), 0); //sets it to 0
                 }
 
                 this.Hide();
@@ -80,14 +84,6 @@ namespace LEALANG_V0
         }
 
 
-        //opens The password forget form when clicked
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Hide();
-            new PasswordForget().ShowDialog();
-            this.Close();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -95,6 +91,7 @@ namespace LEALANG_V0
             this.Close();
         }
 
+        //Show password on button click
         private void button3_Click(object sender, EventArgs e)
         {
             switch (textBox2.UseSystemPasswordChar)

@@ -29,13 +29,14 @@ namespace LEALANG_V0
 
         }
 
+        //on button click
         private void button1_Click(object sender, EventArgs e)
         {
             //goes from 1 to 5
             for (int i = 1; i < 6; i++)
             {
                 Control lab = this.Controls["label" + i.ToString()]; //get the control with the name of label
-                lab.Visible = false;
+                lab.Visible = false; 
                 lab.Text = "This field is required";
                 check = false;
             }
@@ -52,23 +53,23 @@ namespace LEALANG_V0
             curloop = 6;
             if (check == false)
             {
-                if (!(String.IsNullOrEmpty(DBFuncs.DBReadValstr("SELECT * FROM users WHERE Username = @username", textBox3.Text.ToLower(), "@username", "Username")))){
+                if (!(String.IsNullOrEmpty(DBFuncs.DBReadValstr("SELECT * FROM users WHERE Username = @username", textBox3.Text.ToLower(), "@username", "Username")))){ //checking if the user exists
                     label3.Text = "Username is already in use!";
                     label3.Visible = true;
                     secondcheck = true;
                 }
-                if (!(String.IsNullOrEmpty(DBFuncs.DBReadValstr("SELECT * FROM users WHERE Email = @email", textBox2.Text.ToLower(), "@email", "Email")))){
+                if (!(String.IsNullOrEmpty(DBFuncs.DBReadValstr("SELECT * FROM users WHERE Email = @email", textBox2.Text.ToLower(), "@email", "Email")))){ //checks if the email is in use
                     label2.Text = "Email is already in use!";
                     label2.Visible = true;
                     secondcheck = true;
                 }
-                if (textBox5.Text != textBox4.Text)
+                if (textBox5.Text != textBox4.Text) //checks if the two inputs for the passwords match
                 {
                     label5.Text = "Passwords do not match!";
                     label5.Visible = true;
                     secondcheck = true;
                 }
-                if (textBox1.Text.Split(' ').Count() != 2)
+                if (textBox1.Text.Split(' ').Count() != 2) //seeing if there are two seperate strings in the fullname textbox
                 {
                     label1.Text = "Please enter full name as FIRSTNAME LASTNAME";
                     label1.Visible = true;

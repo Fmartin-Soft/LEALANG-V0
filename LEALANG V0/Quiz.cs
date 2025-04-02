@@ -147,23 +147,24 @@ namespace LEALANG_V0
 
         private void MakeNewMultiQuestion(Rootobject root)
         {
-            //This choses the question. I have 30 so only 0 and 30 is needed
-            ChosenNum = rnd.Next(0, 30);
-           
+            
+            ChosenNum = rnd.Next(0, 30); //This choses the question. I have 30 so only 0 and 30 is needed
+
             if (AnsweredQuestions.Count() == 4)
             {
                 Check = true;
             }
+            
             // THIS FOR LOOP IS NOT MY CODE
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < 4; i++) 
             {
                 //Fisher-Yates shuffling algorithm https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle (Accessed 03/03/25 23:51) 
                 
                 int r = rnd.Next(i, ints.Length);
                 (ints[r], ints[i]) = (ints[i], ints[r]);
             }
-            //Assigns the new Q
-            SerialiseBasicMulti(ChosenNum, root, ints);
+            
+            SerialiseBasicMulti(ChosenNum, root, ints); //Assigns the new Q
 
 
             //This assigns them to a label (TEXT ELEMENT)
@@ -176,9 +177,10 @@ namespace LEALANG_V0
         }
 
         //This being in a function just looks nicer.
+        //This just singles out both a hint and a question
         private void SerialiseBasicMulti(int ChosenNum, Rootobject root, int[] ints)
         {
-            //This just singles out both a hint and a question
+            
             H = root.Multi[ChosenNum].Question; //H = Hint
             CA = root.Multi[ChosenNum].CorrectAnswer; //CA = Correct Answer
             A1 = root.Multi[ChosenNum].Answers[ints[0]]; //A1 = Answer 1
@@ -188,9 +190,9 @@ namespace LEALANG_V0
         }
 
         //This being in a function just looks nicer.
+        //This just singles out both a hint and a question
         private void SerialiseBasicState(int ChosenNum, Rootobject root)
         {
-            //This just singles out both a hint and a question
             Q = root.State[ChosenNum].Hint; //Q = Question
             H = root.State[ChosenNum].Question; //H = Hint
             CA = root.State[ChosenNum].CorrectAnswer; //A = Answer
@@ -199,11 +201,11 @@ namespace LEALANG_V0
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            //"Depacks" the json
-            root = JsonConvert.DeserializeObject<Rootobject>(File.ReadAllText(ChosenJSON));
+            
+            root = JsonConvert.DeserializeObject<Rootobject>(File.ReadAllText(ChosenJSON)); //"Depacks" the json
 
-            //Choosing the Question type
-            ChosenQType = rnd.Next(0, 2);
+            
+            ChosenQType = rnd.Next(0, 2); //Choosing the Question type
 
             switch (ChosenQType) 
             {
@@ -230,6 +232,7 @@ namespace LEALANG_V0
 
         private void AnsCheck(object sender)
         {
+            //if its a button question (multi)
             if (sender is Button btn)
             {
                 snder = sender;
@@ -238,12 +241,10 @@ namespace LEALANG_V0
                 {
                     case true:
                         AfterQuestionReview(true);
-                        //Do some funky scoring stuff here
                         Score++;
                         break;
                     case false:
                         AfterQuestionReview();
-                        //Do some funky scoring stuff here
                         break;
                 }
 
@@ -251,6 +252,7 @@ namespace LEALANG_V0
 
 
             }
+            //if its a textbox question (state)
             else if (sender is TextBox textbox)
             {
                 snder = sender;
@@ -281,7 +283,8 @@ namespace LEALANG_V0
         }
 
 
-
+        
+        //these are all here because the buttons and textboxs dont have set names. Having them send the sender object gives the routine all the information about the controls
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == (char)13)
@@ -316,17 +319,17 @@ namespace LEALANG_V0
             if (Check == true)
             {
                 string temp = DBfuncs.LastLoginCheck(nameID);
-                if (temp == "true" || temp == "false")
+                if (temp == "true" || temp == "false") //if the user has not updated their streak today
                 {
                     int streak = DBfuncs.DBReadValint("SELECT * FROM userpoints WHERE UserID = @userid", nameID, "@userid", "Streak");
-                    DBfuncs.StreakChange(nameID, streak + 1);
-                    DBfuncs.UpdateDay(nameID);
+                    DBfuncs.StreakChange(nameID, streak + 1); //update the streak
+                    DBfuncs.UpdateDay(nameID); //update the day logged in
                 }
                 this.Hide();
                 new Home(ChosenLang, nameID, Score).ShowDialog();
                 this.Close();
             }
-            this.Size = new System.Drawing.Size(393, 258);
+            this.Size = new System.Drawing.Size(393, 258); //sets size back to normal
             label3.Visible = false;
             label4.Visible = false;
             button5.Visible = false;
